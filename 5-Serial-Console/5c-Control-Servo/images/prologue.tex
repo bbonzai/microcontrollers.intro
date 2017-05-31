@@ -1,0 +1,23 @@
+\documentclass[xcolor=table]{article}
+\usepackage{ragged2e}
+\usepackage{csquotes}
+\usepackage{pstricks}
+\usepackage{pst-text}
+\usepackage{pst-node}
+\usepackage{savesym}
+\savesymbol{checkmark}
+\usepackage{dingbat}
+\usepackage{pifont}
+\usepackage{wasysym}
+\usepackage{listings}
+\lstdefinestyle{base}{
+  language=C,
+  emptylines=1,
+  breaklines=true,
+  basicstyle=\ttfamily\color{black},
+  moredelim=**[is][\color{red}]{@}{@},
+  moredelim=**[is][\textsl]{|}{|},
+}
+\newsavebox{\myBoxA}
+\newsavebox{\myBoxB}
+\newsavebox{\myBoxC}

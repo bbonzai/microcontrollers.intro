@@ -1,0 +1,49 @@
+\documentclass[xcolor=table]{article}
+\usepackage{ragged2e}
+\usepackage{csquotes}
+\usepackage{pstricks}
+\usepackage{pst-text}
+\usepackage{pst-node}
+\usepackage{pst-eps}
+\usepackage{savesym}
+\savesymbol{checkmark}
+\usepackage{dingbat}
+\usepackage{anyfontsize}
+\usepackage{pifont}
+\usepackage{wasysym}
+\begin{document}
+\psset{unit=1.5in}
+\TeXtoEPS
+\begin{pspicture}(-1.0,-0.4)(8.5,3.1)
+%	\rput[bl](0,0){\psgrid(-2,-1)(7,1.5)}
+\psset{linewidth=0.03,arrowsize=0.25}
+	\psset{unit=0.40in}
+	\rput[bl](0,0){\psline{-}(-2,0)(0,0)(1,0)(1.0,10)(2.0,10)(2.0,0)(20,0)(20,0)(21,0)(21.0,10)(22,10)(22,0)(30,0)}
+%\psset{linewidth=0.05}
+%	\rput[bl](0,0){\psline(1,-3)(1,-1.4)}
+%	\rput[bl](0,0){\psline(1.5,-3)(1.5,-1.4)}
+%	\rput[bl](0,0){\psline(1,11)(1,12.6)}
+%	\rput[bl](0,0){\psline(21,11)(21,12.6)}
+%\psset{linewidth=0.05,arrowsize=0.5}
+%	\rput[bl](0,0){\psline[linecolor=black]{->}(-2,-2.2)(1,-2.2)}
+%	\rput[bl](0,0){\psline[linecolor=black]{->}(4.5,-2.2)(1.5,-2.2)}
+%
+%\fontsize{24}{24}\selectfont
+%	\rput[b](1.25,-5){\textcolor{red}{Pulse Width}}
+%	\pnode(1,11.8){A}
+%	\pnode(21,11.8){B}
+%	\ncline{<->}{A}{B}
+%	\ncput*{\textcolor{red}{Period}}
+%
+% Get rid of the line extension
+%\psset{linestyle=dashed}
+%\psset{unit=1.5in}
+% Get rid of the arrow
+%\rput[bl](0,0){\psline{->}(7.6,1)(8.0,1)}
+%\psset{unit=1.5in}
+%	\fontsize{40}{44}\selectfont
+%	\rput[r](-0.2,0){\texttt{LOW}}
+%	\rput[r](-0.2,1){\texttt{HIGH}}
+\end{pspicture}
+\endTeXtoEPS
+\end{document}
