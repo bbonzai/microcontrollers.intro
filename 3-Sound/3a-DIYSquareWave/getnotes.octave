@@ -1,0 +1,11 @@
+#!/usr/bin/octave -q
+
+fbase = 261.6
+delta = 2^(1/7)
+
+printf("%8s %8s\n", "frequency", "half-period");
+for i = -7:0
+  freq = fbase * 2^(i/7)
+  msec = (1000000/freq)/2
+  printf("%8.0f %8.0f\n",freq, msec)
+endfor

@@ -1,0 +1,6 @@
+For example, suppose you want to turn on a light or motor, but only if
+some other condition is fulfilled, such as:
+
+* a switch has been closed, or 
+* a certain amount of time has passed, or
+* a proximity sensor detects a nearby wall, or

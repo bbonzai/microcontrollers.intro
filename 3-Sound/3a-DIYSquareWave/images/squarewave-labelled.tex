@@ -1,0 +1,51 @@
+\documentclass[xcolor=table]{article}
+\usepackage{ragged2e}
+\usepackage{csquotes}
+\usepackage{pstricks}
+\usepackage{pst-text}
+\usepackage{pst-node}
+\usepackage{pst-eps}
+\usepackage{savesym}
+\savesymbol{checkmark}
+\usepackage{dingbat}
+\usepackage{anyfontsize}
+\usepackage{pifont}
+\usepackage{wasysym}
+\usepackage{pstricks-add}
+\newsavebox{\myBoxA}
+\newlength{\myBoxHeight}
+\newlength{\myBigBoxHeight}
+\newlength{\myBoxWidth}
+\begin{document}
+\psset{unit=1.5in}
+\TeXtoEPS
+\begin{pspicture}(-2,-1.0)(8,1.5)
+%	\rput[bl](0,0){\psgrid(0,0)(10,5)}
+\psset{linewidth=0.03,arrowsize=0.25,linecolor=gray}
+	\rput[bl](0,0){\psline{-}(0,0)(1,0)(1,1)(2,1)(2,0)(3,0)(3,1)(4,1)(4,0)(5,0)(5,1)(6,1)(6,0)}
+	\psset{linestyle=dashed}
+\rput[bl](0,0){\psline{->}(6,0)(7,0)}
+	\fontsize{40}{44}\selectfont
+	\psset{linecolor=black}
+	\rput[r](-0.2,0){\texttt{LOW}}
+	\rput[r](-0.2,1){\texttt{HIGH}}
+\psset{linewidth=0.015,linestyle=solid}
+\rput[b](0,0){\psline(2,-0.6)(2,-0.2)}
+\rput[b](0,0){\psline(4,-0.6)(4,-0.2)}
+\psset{arrowsize=0.15}
+	\rput[b](0,0){\psline{<->}(2,-0.4)(4,-0.4)}
+	\psset{fillstyle=none}
+%\begin{lrbox}{\myBoxA}
+%	\psframebox*{Period}
+%\end{lrbox}
+%\settoheight{\myBoxHeight}{\textrm{Period}}
+%\settowidth{\myBoxWidth}{\textrm{Period}}
+%	\rput(1,-1){\the\myBoxHeight}
+%	\rput(1,0){\the\myBoxWidth}
+%	\rput(3,-0.4){\psframe*[linecolor=white](-52.1568pt,-30pt)(52.1568pt,30pt)}
+	\rput(3,-0.4){\psframebox*{\textrm{Period}}}
+\psset{linewidth=0.06,linestyle=solid,linecolor=black}
+	\rput[bl](0,0){\psline{-}(2,0)(3,0)(3,1)(4,1)(4,0)}
+\end{pspicture}
+\endTeXtoEPS
+\end{document}

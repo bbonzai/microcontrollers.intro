@@ -1,0 +1,28 @@
+\documentclass[xcolor=table]{article}
+\usepackage{ragged2e}
+\usepackage{csquotes}
+\usepackage{pstricks}
+\usepackage{pst-text}
+\usepackage{pst-node}
+\usepackage{pst-eps}
+\usepackage{savesym}
+\savesymbol{checkmark}
+\usepackage{dingbat}
+\usepackage{anyfontsize}
+\usepackage{pifont}
+\usepackage{wasysym}
+\begin{document}
+\psset{unit=1.5in}
+\TeXtoEPS
+\begin{pspicture}(-2,-0.5)(9,1.5)
+%	\rput[bl](0,0){\psgrid(0,0)(10,5)}
+\psset{linewidth=0.03,arrowsize=0.25}
+	\rput[bl](0,0){\psline{-}(0,0)(1,0)(1,1)(2,1)(2,0)(3,0)(3,1)(4,1)(4,0)(5,0)(5,1)(6,1)(6,0)(7,0)(7,1)}
+\psset{linestyle=dashed}
+\rput[bl](0,0){\psline{->}(7,1)(8,1)}
+	\fontsize{40}{44}\selectfont
+	\rput[r](-0.2,0){\texttt{LOW}}
+	\rput[r](-0.2,1){\texttt{HIGH}}
+\end{pspicture}
+\endTeXtoEPS
+\end{document}

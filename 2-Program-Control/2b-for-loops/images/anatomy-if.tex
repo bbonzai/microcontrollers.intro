@@ -1,0 +1,66 @@
+\documentclass[xcolor=table]{article}
+\usepackage{ragged2e}
+\usepackage{csquotes}
+\usepackage{pstricks}
+\usepackage{pst-text}
+\usepackage{pst-node}
+\usepackage{pst-eps}
+\usepackage{pstricks-add}
+\usepackage{savesym}
+\savesymbol{checkmark}
+\usepackage{dingbat}
+\usepackage{anyfontsize}
+\usepackage{pifont}
+\usepackage{wasysym}
+\newsavebox{\myBoxA}
+\usepackage{listings}
+\usepackage{DejaVuSansMono}
+\usepackage{bera}
+\usepackage{libertine}
+\lstdefinestyle{base}{
+	language=C,
+	emptylines=1,
+	breaklines=true,
+	basicstyle=\ttfamily\color{black},
+	moredelim=**[is][\color{red}]{@}{@},
+}
+\begin{document}
+\psset{unit=1.5in}
+\TeXtoEPS
+\begin{pspicture}(-0.5,-0.5)(19.55,12.5)
+\fontsize{80}{88}\selectfont
+%\rput[bl](0,0){\psgrid(0,0)(20,15)}
+\rput[bl](0,2){%
+\begin{minipage}[t]{5.0\linewidth}
+\fontfamily{DejaVuSansMono-TLF}\selectfont%
+	\textcolor{red}{if (}digitalRead(button) == LOW\textcolor{red}{) \{} \\[20pt]
+
+\hspace{5.0cm}\textcolor{black}{digitalWrite(redLED, HIGH);} \\[20pt]
+
+\hspace{5.0cm}\textcolor{black}{digitalWrite(greenLED, LOW);} \\[20pt]
+
+%	\textcolor{black}{\}} else \textcolor{black}{\{} \\[20pt]
+%
+%\hspace{5.0cm}\textcolor{black}{digitalWrite(LED, LOW);} \\[20pt]
+
+	\textcolor{red}{\}}\\
+\end{minipage}
+}
+\libertine%
+\fontshape{it}\fontsize{100}{120}\selectfont%
+\fontsize{100}{120}
+\psbrace[linecolor=blue,braceWidthInner=60pt,braceWidthOuter=60pt,linewidth=0.04](13.4,9.2)(1.8,9.2){}
+\rput[b](7.6,10.5){\textcolor{blue}{test(s)}}
+\rput[bl](12.4,1){\parbox[l]{11in}{\textcolor{blue}{\raggedright statement(s) wrapped in braces}}}
+\psset{linecolor=blue,linewidth=0.04,arrowscale=2.25}
+\pnode(15.4,3.2){A}
+\pnode(14.8,8.7){B}
+\nccurve[angleA=60]{->}{A}{B}
+\pnode(12.2,1.2){A}
+\pnode(0.6,3.05){B}
+\nccurve[angleA=180,angleB=0,armB=1]{->}{A}{B}
+%\rput[bl](0,0){\psline{->}(13.4,4.2)(10.4,6.4)}
+%\rput[bl](0,0){\psline{->}(13.4,1.8)(0.6,1)}
+\end{pspicture}
+\endTeXtoEPS
+\end{document}
