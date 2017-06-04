@@ -1,7 +1,3 @@
-%
-% Susan G. Kleinmann
-% September 18, 2016
-
 The components required for this circuit are:
 
 * an Arduino board,
@@ -25,7 +21,7 @@ The following diagrams introduce these circuit elements one at a time.
 
 | The "Before" Circuit -- a Simple Solenoid |
 |:-----------------------------------------:|
-| ![](images/solenoid_w_all_bb.svg.png)     |
+| ![](images/solenoid_w_all_bb.png)     |
 
 ### Adding the Speaker ##3
 
@@ -35,7 +31,7 @@ The circuitry required for this speaker is exactly the same as the
 
 | Circuit with Speaker                     |
 |:----------------------------------------:|
-| ![](images/solenoid_w_speaker_bb.svg.png |
+| ![](images/solenoid_w_speaker_bb.png)|
 
 ### Adding Some Indicator LEDs ###
 
@@ -46,4 +42,4 @@ required to add these elements is the same as the
 
 | Circuit with Speaker and Indicator LEDs       |
 |:---------------------------------------------:|
-| ![](images/solenoid_w_speaker_leds_bb.svg.png |
+| ![](images/solenoid_w_speaker_leds_bb.png)|

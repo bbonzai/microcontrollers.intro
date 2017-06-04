@@ -1,7 +1,3 @@
-%
-% Susan G. Kleinmann
-% September 18, 2016
-
 ## Results:  Roll 'em ##
 
 The video below shows the output of the program:
