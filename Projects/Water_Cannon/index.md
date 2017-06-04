@@ -1,7 +1,3 @@
-%
-% Susan G. Kleinmann
-% September 17, 2016
-
 ## A Little Cultural Background ##
 
 People have been making fountains that are coordinated with music for

@@ -1,7 +1,3 @@
-%
-% Susan G. Kleinmann
-% September 18, 2016
-
 ## Overall Design of the Code ##
 
 The code for this project includes two separate sequences for controlling the
