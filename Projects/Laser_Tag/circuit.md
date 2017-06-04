@@ -1,7 +1,3 @@
-%
-% Susan G. Kleinmann
-% July 28, 2016
-
 ## Bill of Materials ##
 
 The laser pointer requires:
