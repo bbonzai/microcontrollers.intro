@@ -1,6 +1,3 @@
-% Trinket Pro 3.3V
-% Susan G. Kleinmann
-% June 15, 2016
 
 This project requires only one connection:
 
