@@ -1,6 +1,3 @@
-% blink.ino
-% Susan G. Kleinmann
-% May 24, 2016
 
 An Arduino program (or "sketch") must define two functions:
 
