@@ -1,6 +1,3 @@
-%
-% Susan G. Kleinmann
-% July 6, 2016
 
 1. Change the length of the time that the LED is ON.  You can make the LED 
 look like a strobe light by making the "ON" time very, very short.
