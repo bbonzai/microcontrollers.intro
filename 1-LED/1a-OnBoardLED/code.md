@@ -2,13 +2,14 @@
 
 Programs written in the Arduino IDE are called "sketches".
 
-A proram or a sketch contains a series of statements which tell the
+A sketch contains a series of statements which tell the
 microcontroller what to do.  Each statement *must* end in a semi-colon.
 
 Sometimes, it is convenient to treat a group of statements as a single
-entity, or "block".  Curly braces (`{`..`}`) are used to enclose a block.
+entity, or "block".  A block of statements is always enclosed in curly 
+braces (`{`..`}`).
 
-A function is a block of statements which has:
+A function is a block of statements which have:
 
 * a name (by which it can be invoked once or many times)
 * a set of input parameters
@@ -16,7 +17,7 @@ A function is a block of statements which has:
 
 An Arduino sketch must contain at least two functions with specific names:
 
-:` setup()`
+` setup()`
 : This function is executed just once, after the board is powered on or reset.
 : This is a good place to set whatever I/O pin you'll use into INPUT mode 
 : or OUTPUT mode.  All pins on Arduino boards are in INPUT mode by default.
@@ -53,30 +54,40 @@ then turn it off for 1 second is:
 
     }
 
-In reality, this sketch is incorporated by the Arduino software in a larger
-program.  that program calls the `setup()` function once.  In this case,
-the `setup()` function tells the microcontroller that digital pin 13 will be
-operated in `OUTPUT` mode.  If this statement were missing, then the microcontroller
-would operate pin 13 as if it were in the default mode, which is `INPUT`.
+In reality, a sketch is not, by itself, enough to program the Arduino.  
+Instead, the arduino program takes your sketch, and incorporates it into a 
+larger program.  This larger program 
 
-Digital pins output voltage at two levels: 0V and 5V.  The statement:
+* calls the `setup()` function **once**, and then
+* calls the `loop()` function again and again, until the microcontroller is reset.  
 
-    digitalWrite(13, LOW);
+### What Happens in the `setup()` function? ###
+
+The `setup()` function above tells the microcontroller that digital pin 13 will be
+operated in `OUTPUT` mode.  (This statement is essential, because without it the
+pin would be *assumed* to be operating in the default mode, which is `INPUT`.)
+
+In `OUTPUT` mode, the specified pin can produce either of two voltage levels, 
+0V when it is set `HIGH`, and 5V when it is set `LOW`.  The statement:
+
+   digitalWrite(13, LOW);
 
 sets the initial value of the voltage on pin 13 to be 0V.  The LED will be off.
 
-Once the `setup()` function has executed both statements, the larger program
-then calls the function `loop()` again, and again, and again, forever.  
-In this case, the statements in `loop()` have the effect:
+### What Happens in the `loop()` function? ###
+
+The statements in `loop()` have the effect:
 
 1.  Set the voltage on pin 13 to 5V.
 2.  Wait 1000 msec = 1 second.
 3.  Set the voltage on pin 13 to 0V.
 4.  Wait 1000 msec = 1 second.
 
-This action continues until the microcontroller is reset.
+At this point, the `loop()` function has completed its work, but the larger
+program then just calls `loop()` again, and the 4 steps above are repeated.
+Ad infinitum.
 
-### Improved Version ###
+## An Improved Version ##
 
 A simple improvement to the above program makes it much easier to
 maintain.  Suppose you wanted to use the same code (or similar)
