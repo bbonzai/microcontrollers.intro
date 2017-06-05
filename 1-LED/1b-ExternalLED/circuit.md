@@ -1,7 +1,3 @@
-% Trinket Pro 3.3V
-% Susan G. Kleinmann
-% May 22, 2016
-
 ### Components of the Circuit ###
 
 There are three essential components to this circuit:

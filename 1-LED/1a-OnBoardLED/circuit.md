@@ -1,4 +1,3 @@
-
 This project requires only one connection:
 
     Controller board ⇒ [ Some source of power ]

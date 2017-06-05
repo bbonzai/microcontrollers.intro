@@ -1,6 +1,4 @@
-%
-% Susan G. Kleinmann
-% June 25, 2016
+## Circuit for three LEDs ##
 
 The circuit below includes:
 

@@ -1,6 +1,4 @@
-%
-% Susan G. Kleinmann
-% July 6, 2016
+## To Do ##
 
 1. Add the on-board LED (pin 13 on an Arduino UNO) to your sketch. 
 Re-write the `setup()` function in your sketch so that it starts out with 

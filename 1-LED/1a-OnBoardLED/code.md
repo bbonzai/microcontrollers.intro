@@ -1,7 +1,22 @@
+## General structure of an Arduino program ##
 
-An Arduino program (or "sketch") must define two functions:
+Programs written in the Arduino IDE are called "sketches".
 
-`setup()`
+A proram or a sketch contains a series of statements which tell the
+microcontroller what to do.  Each statement *must* end in a semi-colon.
+
+Sometimes, it is convenient to treat a group of statements as a single
+entity, or "block".  Curly braces (`{`..`}`) are used to enclose a block.
+
+A function is a block of statements which has:
+
+* a name (by which it can be invoked once or many times)
+* a set of input parameters
+* an output value
+
+An Arduino sketch must contain at least two functions with specific names:
+
+:` setup()`
 : This function is executed just once, after the board is powered on or reset.
 : This is a good place to set whatever I/O pin you'll use into INPUT mode 
 : or OUTPUT mode.  All pins on Arduino boards are in INPUT mode by default.
@@ -9,15 +24,21 @@ An Arduino program (or "sketch") must define two functions:
 `loop()`
 : This function is executed repeatedly until the board is powered off or reset.
 
-Neither function takes any arguments.  So they can be written as: `setup()` or `setup(void)`,
-and `loop()` or `loop(void)`.
+Neither function takes any input parameters, and neither one produces an output
+value.  So they they both have the same "signature", either
 
-Your program can define other functions, but these two functions are essential.
+    void setup() {...}
+    void loop() {...)
+
+You could also write:
+
+    void setup (void) {...}
+    void loop (void) {...}
 
 ### Bare-bones version ###
 
-Here is a bare-bones version of a program that will turn on the on-board LED
-for 1 second, and then turn it off for 1 second:
+A bare-bones program to turn on the on-board LED for 1 second, and 
+then turn it off for 1 second is:
 
     void setup() {
         pinMode(13, OUTPUT);
@@ -32,13 +53,43 @@ for 1 second, and then turn it off for 1 second:
 
     }
 
+In reality, this sketch is incorporated by the Arduino software in a larger
+program.  that program calls the `setup()` function once.  In this case,
+the `setup()` function tells the microcontroller that digital pin 13 will be
+operated in `OUTPUT` mode.  If this statement were missing, then the microcontroller
+would operate pin 13 as if it were in the default mode, which is `INPUT`.
+
+Digital pins output voltage at two levels: 0V and 5V.  The statement:
+
+    digitalWrite(13, LOW);
+
+sets the initial value of the voltage on pin 13 to be 0V.  The LED will be off.
+
+Once the `setup()` function has executed both statements, the larger program
+then calls the function `loop()` again, and again, and again, forever.  
+In this case, the statements in `loop()` have the effect:
+
+1.  Set the voltage on pin 13 to 5V.
+2.  Wait 1000 msec = 1 second.
+3.  Set the voltage on pin 13 to 0V.
+4.  Wait 1000 msec = 1 second.
+
+This action continues until the microcontroller is reset.
+
 ### Improved Version ###
 
-This revised version of the program assigns a "name" to the address of the I/O pin 
-being used (the name is simply `LED`).  By giving the pin number a name, you can
-easily modify the program for a different board (where the I/O pin of the on-board
-LED might be different).  Since this name is used both in the `setup()` function
-and in the `loop()` function, it must be defined before both of them:
+A simple improvement to the above program makes it much easier to
+maintain.  Suppose you wanted to use the same code (or similar)
+on another microcontroller board where the on-board LED was controlled 
+through digital pin 8.  Then you'd have to modify the above program in 3 places.
+
+To avoid that, write a *single* statement at the top of the program, where
+you specify the pin number of the on-board LED, and assign that value to a
+"name"; in this case, the name "LED" is an obvious choice, but "ONBOARDLED"
+would work fine also.  (It is common practice to use names with all caps for
+variables that won't be changed during the course of the program.)  
+Whatever name you use, since the statement is outside of both functions,
+it is said to be a "global" variable, and can be accessed by both of them.
 
     int LED=13;
 
