@@ -1,6 +1,4 @@
-%
-% Susan G. Kleinmann
-% June 29, 2016
+## To Do ##
 
 1. Modify the sample code so that each note lasts twice as long.  What delay
 times between notes do you need to ensure that you can hear both notes distinctly?

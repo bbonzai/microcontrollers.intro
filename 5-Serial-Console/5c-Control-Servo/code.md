@@ -1,6 +1,4 @@
-% blink.ino
-% Susan G. Kleinmann
-% June 30, 2016
+## Code to Control a Servo Position Interactively ##
 
 ### Interactive Servo Control: Simple Case (no value checking) ###
 

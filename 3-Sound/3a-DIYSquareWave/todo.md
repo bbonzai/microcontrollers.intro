@@ -1,6 +1,4 @@
-%
-% Susan G. Kleinmann
-% June 29, 2016
+## To Do ##
 
 1. Modify the sample code to make High C instead of Middle C.
 

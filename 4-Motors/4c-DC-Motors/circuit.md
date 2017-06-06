@@ -1,6 +1,4 @@
-%
-% Susan G. Kleinmann
-% June 26, 2016
+## Circuit for Driving a Small DC Motor ##
 
 The components required for this circuit are:
 

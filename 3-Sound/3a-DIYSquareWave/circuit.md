@@ -1,7 +1,3 @@
-%
-% Susan G. Kleinmann
-% June 26, 2016
-
 ### Components of the Circuit ###
 
 This circuit only needs:

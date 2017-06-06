@@ -1,8 +1,4 @@
-%
-% Susan G. Kleinmann
-% July 6, 2016
-
-This packet shows you how to achieve nearly-smooth motion with a hobby servo.
+## Smooth Motion with a Hobby Servo ##
 
 ### Simulating Smooth Motion Using Small Steps ###
 

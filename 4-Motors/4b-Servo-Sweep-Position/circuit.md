@@ -1,8 +1,4 @@
-%
-% Susan G. Kleinmann
-% June 16, 2016
-
-## Servo Wiring ##
+## Wiring a Hobby Servo ##
 
 Hobby servo motors have 3 wires:
 

@@ -1,6 +1,4 @@
-%
-% Susan G. Kleinmann
-% June 28, 2016
+## Code to Drive a Solenoid Motor ##
 
 The code for this circuit is just like the 
 [code to blink an LED](../../1-LED/1b-ExternalLED/code.html)!

@@ -1,6 +1,4 @@
-%
-% Susan G. Kleinmann
-% June 28, 2017
+## Code to Display Output on the Serial Console ##
 
 This code is run only once, so all of the statements go in the 
 `setup()` function.  The Arduino software won't compile the sketch

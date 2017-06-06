@@ -1,7 +1,3 @@
-% blink.ino
-% Susan G. Kleinmann
-% June 29, 2016
-
 The following sketches show how to make a note close to Middle C and a note close 
 to High C on a piezo buzzer. The table below shows the relevant parameters:
 

@@ -1,6 +1,4 @@
-%
-% Susan G. Kleinmann
-% July 7, 2016
+## Circuit to Connect an Ultrasonic Sensor Module ##
 
 The components required for this circuit are:
 

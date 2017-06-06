@@ -1,7 +1,3 @@
-%
-% Susan G. Kleinmann
-% July 6, 2016
-
 1. Add an external LED to your circuit and your sketch.
 Re-write `init()` so that it starts out with both 
 the external and on-board LED turned off.  Then re-write `loop()`

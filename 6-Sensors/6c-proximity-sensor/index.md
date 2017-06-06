@@ -1,6 +1,4 @@
-%
-% Susan G. Kleinmann
-% June 24, 2016
+## Passive Infrared (PIR) Sensors ##
 
 A PIR (aka Passive InfraRed) Sensor detects motion when some warm object (like a 
 person or a mouse or a falling soldering iron) moves within its field of view.

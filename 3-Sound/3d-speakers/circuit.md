@@ -1,6 +1,3 @@
-%
-% Susan G. Kleinmann
-% June 26, 2016
 
 The components required for this circuit are:
 

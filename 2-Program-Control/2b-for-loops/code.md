@@ -1,7 +1,3 @@
-% blink.ino
-% Susan G. Kleinmann
-% May 21, 2016
-
 The following sketch blinks the on-board LED in a pattern of 3 short blinks, followed by
 3 long blinks, followed by 3 short blinks, followed by a long delay.  This is the light
 pattern corresponding to the Morse code for "SOS".

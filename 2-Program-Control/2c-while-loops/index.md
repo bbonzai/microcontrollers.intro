@@ -1,7 +1,3 @@
-%
-% Susan G. Kleinmann
-% June 17, 2016
-
 Use a `while` loop to execute a statement (or a block of statements) any number of
 times until a set of conditions is satisfied.
 

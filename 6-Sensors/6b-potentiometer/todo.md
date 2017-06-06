@@ -1,6 +1,4 @@
-%
-% Susan G. Kleinmann
-% June 24, 2016
+## To Do ##
 
 1. Add a "Serial Console" to your sketch, so that you can see on the screen the values
 read from the pot as you turn the handle.  To do this, add a line like this to the

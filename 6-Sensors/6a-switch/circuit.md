@@ -1,6 +1,4 @@
-%
-% Susan G. Kleinmann
-% June 21, 2016
+## Using a Swtich to Control a Single LED ##
 
 The following circuit shows:
 

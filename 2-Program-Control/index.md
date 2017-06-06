@@ -1,7 +1,3 @@
-%
-% Susan G. Kleinmann
-% July 4, 2017
-
 The packets in this group introduce a number of general programming 
 constructs that will be useful in all further examples.
 

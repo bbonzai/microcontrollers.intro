@@ -1,6 +1,4 @@
-%
-% Susan G. Kleinmann
-% June 19, 2016
+## Making Sounds ###
 
 Many types of devices make sounds, for example:
 

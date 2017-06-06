@@ -1,7 +1,4 @@
-%
-% Susan G. Kleinmann
-% June 22, 1016
+## To Do ##
 
-* Experiment with different delay times and see when the switch behaves erratically.
+1. Experiment with different delay times and see when the switch behaves erratically.
 
-* Substitute a 

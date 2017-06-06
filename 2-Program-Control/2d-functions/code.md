@@ -1,7 +1,3 @@
-% blink.ino
-% Susan G. Kleinmann
-% July 6, 2016
-
 ### The simple `blink` function ###
 
 The following sketch uses the `blink` function described in the [intro to this section](index.html).

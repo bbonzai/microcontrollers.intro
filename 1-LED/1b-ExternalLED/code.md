@@ -1,6 +1,9 @@
-% blink.ino
-% Susan G. Kleinmann
-% May 21, 2016
+## Blink an External LED ##
+
+This program is a simple modification of the 
+[program to control the on-board LED](../1a-OnBoardLED/code.html):  
+just change the value of the pin associated with the LED being
+controlled:
 
     /* Blink an external LED attached to pin 8 */
      

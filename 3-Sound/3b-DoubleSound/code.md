@@ -1,6 +1,4 @@
-%
-% Susan G. Kleinmann
-% June 29, 2016
+## Code to Make a Sound with a Specific Pitch ##
 
 This packet uses a buzzer attached to two I/O pins, called BUZZERRED and BUZZERBLK. The 
 sketch defines a [function](../../2-Program-Control/2d-functions), `makesound()`, to

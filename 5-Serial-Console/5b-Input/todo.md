@@ -1,6 +1,4 @@
-%
-% Susan G. Kleinmann
-% June 29, 2016
+## To Do ##
 
 1.  Prompt the user for a value between 0 and 1024.  Then use the `map()` function to
 convert that value into the corresponding value between 0 and 255:

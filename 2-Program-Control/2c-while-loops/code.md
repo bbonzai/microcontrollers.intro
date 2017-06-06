@@ -1,7 +1,3 @@
-% blink.ino
-% Susan G. Kleinmann
-% May 21, 2016
-
 The first sketch below just shows how to replace a `while` loop with a `for` loop. 
 
 The second sketch illustrates a case where `while` is more appropriate than

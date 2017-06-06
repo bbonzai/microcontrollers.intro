@@ -1,7 +1,3 @@
-% Trinket Pro 3.3V
-% Susan G. Kleinmann
-% June 18, 2016
-
 Any one of these circuits would work for the functions demonstrated in this packet:
 
 * [Blinking the on-board LED](../../1-LED/1a-OnBoardLED/circuit.html)

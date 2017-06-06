@@ -1,6 +1,4 @@
-%
-% Susan G. Kleinmann
-% July 6, 2016
+## To Do ##
 
 1.  Speakers should have a much wider range of output frequencies than simple buzzers.
 To check this, add a buzzer to your circuit; e.g. add the `+` lead of a buzzer to GPIO

@@ -1,8 +1,4 @@
-%
-% Susan G. Kleinmann
-% June 15, 2017
-
-## Components of the Circuit ##
+## Circuit to Control a Servo with a Potentiometer ##
 
 The components of the circuit are:
 

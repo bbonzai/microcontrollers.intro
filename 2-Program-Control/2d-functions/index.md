@@ -1,7 +1,3 @@
-%
-% Susan G. Kleinmann
-% June 17, 2016
-
 If you have written even one Arduino sketch, you have already written at least
 two functions:  `setup()` and `loop()`.  When you compile a sketch, the Arduino software
 looks for definitions of these two functions.  

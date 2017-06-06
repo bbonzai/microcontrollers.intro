@@ -1,7 +1,3 @@
-% blink.ino
-% Susan G. Kleinmann
-% June 19, 2016
-
 ### Another Way to Blink the on-Board LED ###
 
 The following sketch turns off the on-board LED if it is on, and turns it back on

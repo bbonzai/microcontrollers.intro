@@ -1,6 +1,4 @@
-%
-% Susan G. Kleinmann
-% June 26, 2016
+## A Buzzer Circuit with Louder Sound ##
 
 The circuit for this packet uses just:
 

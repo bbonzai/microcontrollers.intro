@@ -1,6 +1,4 @@
-%
-% Susan G. Kleinmann
-% June 28, 2016
+## Interactivity: Enabling User Input to Your Arduino ##
 
 This packet shows how to use the Arduino Serial Console to:
 
@@ -13,7 +11,7 @@ This packet shows how to use the Arduino Serial Console to:
 The biggest challenge in getting accurate input from the Arduino's Serial Console is
 just waiting for it.
 
-For example, a quick read of the reference page for Serial.* functions 
+For example, a quick read of the reference page for `Serial.*` functions 
 on the Arduino web site might suggest that your program could read a character
 from the Serial Console using a command like:
 

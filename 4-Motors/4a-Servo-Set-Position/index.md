@@ -1,7 +1,3 @@
-%
-% Susan G. Kleinmann
-% June 22, 2016
-
 <!--
 Hobby servo motors are often used to control RC cars and toys, have
 many advantages:
@@ -29,7 +25,21 @@ separately.  Also available are larger horns and brackets to mount the servo fir
 in place.
 -->
 
-Hobby servos are controlled by sending it a series of pulses, and then 
+Hobbyists use servo motors to control RC cars and similar toys.  By comparison to
+industrial-strength servos, hobby servos are relatively cheap and much simple to 
+install in a circuit.  However, they do not offer the degree of control that can be
+expected of an industrial servo, nor can they exert as much power.
+
+Hobby servos come in two types:
+
+a.  Servos that can turn a spindle to any position within a fixed range, typically 0° to 180°;
+the position can be controlled.
+b.  Servos that can turn a spindle continuously, aka "continuous rotation servos"; their speed, 
+but not the position can be controlled.
+
+This packet focusses on ordinary servos whose position (but not speed) are under your control.
+
+Controlling a hobby servo is done by sending it a series of pulses, and then 
 changing ("modulating") the width of those pulses in order to make its
 shaft rotate to a different position.  This technique is called "Pulse Width Modulation"
 (i.e. PWM).

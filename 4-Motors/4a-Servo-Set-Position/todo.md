@@ -1,9 +1,4 @@
-%
-% Susan G. Kleinmann
-% June 13, 2016
-
-
-### Variations on the Servo example ###
+## To Do ##
 
 1.  Revise the example code so that the servo moves through the discrete positions:
 0°, 10°, 20°, etc.  

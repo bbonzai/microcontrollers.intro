@@ -1,6 +1,4 @@
-%
-% Susan G. Kleinmann
-% July 25, 2016
+## Sketch to control 3 LEDs ##
 
 The sketch below causes three LEDs with the colors red, yellow, and green, to light up
 in sequence like a traffic light.

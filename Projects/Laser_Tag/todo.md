@@ -1,6 +1,4 @@
-%
-% Susan G. Kleinmann
-% July 29, 2016
+## To Do ##
 
 1.  Add a buzzer or speaker to the circuit, and turn it on when the servo
 reaches 180°.

@@ -1,6 +1,4 @@
-%
-% Susan G. Kleinmann
-% June 28, 2016
+## How to See Program-Generated Output ##
 
 This packet shows how to display values (specifically, a table of square roots)
 using the Arduino Serial Console on the Arduino.

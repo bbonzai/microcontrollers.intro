@@ -1,6 +1,4 @@
-% Trinket Pro 3.3V
-% Susan G. Kleinmann
-% May 28, 2016
+## Sound Demo ##
 
 This sound file plays the 3 Sounds make by the buzzer:
 

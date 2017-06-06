@@ -1,6 +1,4 @@
-%
-% Susan G. Kleinmann
-% June 27, 2016
+## Code to Control the Speed of a DC Motor ##
 
 The DC motor in this packet gets power from the battery pack when the Collector 
 (center) pin of the transistor is set `HIGH`.  That transistor is attached

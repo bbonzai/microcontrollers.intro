@@ -1,6 +1,4 @@
-%
-% Susan G. Kleinmann
-% July 6, 2016
+## Code to Continuously Sweep a Servo in Small Steps ## 
 
 Both examples below use a `for` loop to sweep the servo smoothly from its starting
 position to its ending position.
