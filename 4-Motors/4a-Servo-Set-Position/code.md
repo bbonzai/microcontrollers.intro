@@ -1,6 +1,4 @@
-%
-% Susan G. Kleinmann
-% June 22, 2016
+## Circuit to Control a Hobby-Type Servo Motor ##
 
 To control the servo, you'll need special functions that will 
 create pulses of `HIGH/LOW` signals on the I/O pin attached to the

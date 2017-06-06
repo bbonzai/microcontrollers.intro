@@ -1,6 +1,4 @@
-%
-% Susan G. Kleinmann
-% June 26, 2016
+## To Do ##
 
 1.  Convince yourself that this circuit and accompanying code really
 do double the power through the buzzer by moving one of the leads of

@@ -1,6 +1,4 @@
-% Trinket Pro 3.3V
-% Susan G. Kleinmann
-% July 5, 2016
+## Speaker Demo ##
 
 This is the sound recorded from the melody sketch using a 
 pretty cheap 8Ω speaker:

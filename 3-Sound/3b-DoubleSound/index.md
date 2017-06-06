@@ -1,6 +1,4 @@
-%
-% Susan G. Kleinmann
-% June 26, 2016
+## How to Double the Sound From Your Buzzer ##
 
 The piezo buzzer reacts to the magnitude of the change in voltage across its terminals.
 You can double the volume of the sound created by doubling the voltage change.
