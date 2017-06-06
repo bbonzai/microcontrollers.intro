@@ -1,8 +1,4 @@
-%
-% Susan G. Kleinmann
-% June 22, 2016
-
-### What is a Pot? ###
+## What is a Potentiometer? ##
 
 A "pot" or "potentiometer" is a variable resistor.  Rather than having a fixed value
 like 220Ω or 10KΩ, a potentiometer can take on any range of values between 0 and

@@ -1,6 +1,4 @@
-% blink.ino
-% Susan G. Kleinmann
-% July 26, 2016
+## Code to Output Strings to the Serial Console ##
 
 The following sketch prompts the user to input an integer, and then
 outputs the square of the number back to the console. 
@@ -19,7 +17,7 @@ outputs the square of the number back to the console.
       }
     }
 
-Three separate invocations of `Serial.prin()` are required above because
+Three separate invocations of `Serial.print()` are required above because
 `Serial.print()` and `Serial.println()` can take only one argument.  To get
 around this, you can concatenate separate components of an output line
 into a string before printing it, using the `+` operator on strings, as 

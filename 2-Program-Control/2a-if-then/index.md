@@ -1,7 +1,3 @@
-%
-% Susan G. Kleinmann
-% June 16, 2016
-
 ### Boolean Values ###
 
 The Arduino language (and the `C++` language on which it is based) contain the datatype

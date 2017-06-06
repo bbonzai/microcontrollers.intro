@@ -1,7 +1,3 @@
-%
-% Susan G. Kleinmann
-% Jul 4, 2016
-
 1. Try the sample code with the circuit using an external LEDs rather than the
 on-board LED.  
 

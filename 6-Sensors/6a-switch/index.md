@@ -1,6 +1,4 @@
-%
-% Susan G. Kleinmann
-% June 22, 2016
+## Using Pushbutton Switches ##
 
 This packet shows you how to use a pushbutton switch to turn on a device
 (or a whole suite of devices).

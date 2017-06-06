@@ -1,7 +1,3 @@
-%
-% Susan G. Kleinmann
-% June 25, 2016
-
 ## Controlling Arduinos with Sensors ##
 
 All of the packets in this section will be about using various devices 

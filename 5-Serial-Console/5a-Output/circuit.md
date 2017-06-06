@@ -1,6 +1,4 @@
-% Trinket Pro 3.3V
-% Susan G. Kleinmann
-% June 28, 2016
+## Simple Circuit Just to View Computed Output ##
 
 This project uses only:
 

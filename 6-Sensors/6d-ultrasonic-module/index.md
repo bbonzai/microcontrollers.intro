@@ -1,22 +1,30 @@
-%
-% Susan G. Kleinmann
-% July 7, 2016
+## Ultrasonic Distance Sensors ## 
 
-This packet shows how to use the HC-SR04 ultrasonic module, which is 
-a sonar device commonly used to help robots avoid obstacles in their paths.
+Ultrasonic sensor work by sending out a sound wave at a particular
+frequency, and then measuring the amount of time it takes for the sound wave to 
+reflect off of some surface back to it.  Therefore, ultrasonic sensors have
+two parts: a sender and a receiver.  These types of sensors are frequently
+used in robots to detect when the robot is nearing an obstacle.
 
-This module can work with sunlight or black materials, but not with
-soft materials like curtains.    Its ranging distance is 2cm to 500cm
-(or 1 inch to 16 feet).
+Because of the way they work, ultrasonic sensors can succeed in measuring 
+distances to objects that are difficult to "see" either because they are
+in unlit areas or because their color resembles the surroundings.
+However, ultrasonic sensors are a poor choice when the target being tracked
+is made of some soft material; such objects will not reflect the sound
+wave very efficiently.
 
-The module contains two units: 
+This packet shows how to use the HC-SR04 ultrasonic module, which can
+be used to detect obstacles that are as near as 2cm and as distant as 400cm,
+and can measure their distance with a precision of 0.3cm.  
 
-* a trigger, which should be activated by setting it at a `HGH` 
+The two components of the HC-SR04 ultrasonic module are:
+
+* the trigger, which should be activated by setting it at a `HGH` 
 state for 10 µs.  This has the effect of making the trigger unit
 send out a high-frequency sound wave consisting of 8 pulses.
 This sound wave will bounce off nearby objects.
 
-* an echo, which detects sound waves at the "correct" frequency (i.e.,
+* the echo, which detects sound waves at the "correct" frequency (i.e.,
 the frequency used by the trigger).  When it makes a detection, it
 reports a `long int` value which twice the time `t` it takes sound to travel
 to that object.

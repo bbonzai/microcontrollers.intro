@@ -1,7 +1,3 @@
-%
-% Susan G. Kleinmann
-% July 6, 2016
-
 1. Add a delay between each *character* (just so that it's easy to disntinguish
 one character from the next when you look at the LED).  This delay should 
 be shorter than the "inter-word" delay at the end of `loop()`.

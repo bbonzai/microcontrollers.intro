@@ -1,6 +1,4 @@
-%
-% Susan G. Kleinmann
-% Jun 27, 2016
+## DC Motors ##
 
 Motors like the ones pictured above are inexpensive and commonly 
 available at hobby shops.

@@ -1,6 +1,4 @@
-%
-% Susan G. Kleinmann
-% June 27, 2016
+## To Do ##
 
 1.  Try slightly lower values for the slowest speed and see just how low it 
 can go before the motor refuses to move at all.

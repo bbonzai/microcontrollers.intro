@@ -1,6 +1,4 @@
-%
-% Susan G. Kleinmann
-% June 22, 2016
+## Code to Control a Servo Using a Potentiometer ##
 
 This sketch reads the current voltage on a pot, and sets the angle of a servo
 in response.  So:

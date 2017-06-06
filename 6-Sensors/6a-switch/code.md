@@ -1,6 +1,4 @@
-%
-% Susan G. Kleinmann
-% June 22, 2016
+## Code to Respond to a Pushbutton Switch ##
 
 In this sketch, it is assumed that the pushbutton is wired up so that when it 
 is pressed, it connects an I/O pin to `GND`.  That I/O pin is initialized as 

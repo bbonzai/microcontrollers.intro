@@ -1,6 +1,4 @@
-%
-% Susan G. Kleinmann
-% June 28, 2016
+## Solenoids ##
 
 A solenoid is like a motor, in that both are "actuators", i.e., a device
 that makes something else move.  The difference is:

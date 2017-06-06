@@ -1,6 +1,4 @@
-% Trinket Pro 3.3V
-% Susan G. Kleinmann
-% July 5, 2016
+## Demo Comparing Sounds Made by Different Techniques ##
 
 This is the sound recorded from the sketch "Compare sounds from `makeSound()` and `tone()`
 

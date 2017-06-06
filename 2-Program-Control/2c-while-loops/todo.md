@@ -1,7 +1,3 @@
-%
-% Susan G. Kleinmann
-% June 19, 2016
-
 1. Try implementing any of the "TODO's" in the [packet on for loops](../2b-for-loops) 
 as `while` loops instead.
 

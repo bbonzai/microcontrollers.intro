@@ -1,6 +1,4 @@
-%
-% Susan G. Kleinmann
-% June 29, 2016
+## To Do ##
 
 1.  Add some bells and whistles to the `loop()` function.  For example,
 have it calculate the difference between the current position angle of the

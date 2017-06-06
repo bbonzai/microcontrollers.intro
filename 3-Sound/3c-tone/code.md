@@ -1,6 +1,4 @@
-% 
-% Susan G. Kleinmann
-% June 29, 2016
+## A Program to Make Comparative Sounds ##
 
 The following sketch makes three sounds:
 

@@ -1,6 +1,4 @@
-%
-% Susan G. Kleinmann
-% June 24, 2016
+## Circuit to Use a Proximity Sensor ##
 
 ## Components of the Circuit ##
 
@@ -15,7 +13,7 @@ The circuit is shown below.
 
 | Controlling an LED with a PIR Sensor       |
 |:------------------------------------------:|
-| ![](images/pir_w_led_bb.svg.png) |
+| ![](images/pir_w_led_bb.svg.png)           |
 
 
 

@@ -1,6 +1,4 @@
-%
-% Susan G. Kleinmann
-% June 26, 2016
+## Circuit to Drive a Solenoid Motor ##
 
 The components required for this circuit are:
 

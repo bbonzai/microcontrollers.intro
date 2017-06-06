@@ -1,7 +1,3 @@
-%
-% Susan G. Kleinmann
-% June 22, 2016
-
 ## Controlling Motors with an Arduino ##
 
 Motors are at the heart of robotics.  Most robots have a few motors, some have

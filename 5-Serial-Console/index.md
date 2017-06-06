@@ -1,6 +1,4 @@
-%
-% Susan G. Kleinmann
-% June 27, 2016
+## Viewing Output from an Arduino Device ##
 
 The Arduino programming environment provides for some user input and output
 by its "Serial Console".  Packets in this group show you how to use that

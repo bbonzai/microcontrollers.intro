@@ -1,6 +1,4 @@
-%
-% Susan G. Kleinmann
-% July 5, 2016
+## To Do ##
 
 1.  Change the pattern of `HIGH`/`LOW` signals to the solenoid, so that instead of being 
 on (`HIGH`) for 1.5s, and off (`LOW`) for 4s, it is on and then off in some other sequence,

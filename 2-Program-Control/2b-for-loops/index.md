@@ -1,7 +1,3 @@
-%
-% Susan G. Kleinmann
-% June 17, 2016
-
 Use a `for` loop to execute a statement (or a block of statements) a certain number
 of times.
 
