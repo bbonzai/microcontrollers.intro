@@ -30,3 +30,16 @@ An easy and obvious extension to the above is to control many LEDs.
 
 The packet "[1c-SeveralLEDs](1c-SeveralLEDs)" shows a rudimentary way 
 to simulate a traffic stoplight using one red, one green, and one yellow LED.
+
+## Writing Your Own Functions ##
+ 
+Functions allow you to define a block of statements that can be 
+easily repeated.  Functions have two key advantages over loops:
+
+* Functions have names, which means they can be "called" at any 
+point in your program.  
+* Functions take "parameters", so that their outcome can be adjusted for
+different inputs.
+
+`functions` are covered in [packet 2d](2d-functions).
+

@@ -7,17 +7,17 @@ a `bool` variable can take only one of two values: `true` or `false`.
 
 Operators which produce Boolean values are:
 
-| Operator  | Meaning                                                                             |
-|:---------:|:------------------------------------------------------------------------------------|
-| (x == y)  | `true` if x is equal to y                             |
-| !(x == y) | `true` if x is NOT equal to y                             |
-| !(x)      | `true` if x is false or 0                                              |
-| x > y     | `true` if x is greater than y                             |
-| x >=y     | `true` if x is greater than or equal to y                 |
-| x <y      | `true` if x is less than y                    |
-| x <=y                        | `true` if x is less than or equal to y |
-| `(`expr1`)` `&&` `(`expr2`)` | `true` when `expr1` is `true` *and* `expr2` is `true`            |
-| `(`expr1`)` `||` `(`expr2`)` | `true` when *either* `expr1` is `true` *or* `expr2` is `true`    |  
+| Operator             | Meaning                                                          |
+|:--------------------:|:-----------------------------------------------------------------|
+| `(x == y)`           | `true` if x is equal to y                                        |
+| `!(x == y)`          | `true` if x is NOT equal to y                                    |
+| `!(x)`               | `true` if x is false or 0                                        |
+| `x > y`              | `true` if x is greater than y                                    |
+| `x >= y`             | `true` if x is greater than or equal to y                        |
+| `x < y`              | `true` if x is less than y                                       |
+| `x <= y`             | `true` if x is less than or equal to y                           |
+| `(expr1) && (expr2)` | `true` when `expr1` is `true` *and* `expr2` is `true`            |
+| `(expr1) || (expr2)` | `true` when *either* `expr1` is `true` *or* `expr2` is `true`    |  
 
 ## Some example tests and their results ##
 
