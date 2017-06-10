@@ -14,32 +14,32 @@ If the slide switch is in the opposite position, then the `LEDR` is turned off
 and `LEDY` is turned on.
 
 
-  int SW1=13;
-  int SW2=12;
-  
-  int LEDR=4;
-  int LEDY=3;
-  
-  void setup(void) {
+```int SW1=13;
+int SW2=12;
+
+int LEDR=4;
+int LEDY=3;
+    
+void setup(void) {
     pinMode(SW1,INPUT);
     pinMode(SW2,INPUT);
     pinMode(LEDR,OUTPUT);
     pinMode(LEDY,OUTPUT);
     digitalWrite(LEDR, LOW);
     digitalWrite(LEDY, LOW);
-  }
+}
   
-  void loop(void) {
+void loop(void) {
     if (digitalRead(SW1) == HIGH) {
-      digitalWrite(LEDR, HIGH);
-      digitalWrite(LEDY, LOW);
-      delay(100);
-    } else {
-      digitalWrite(LEDR, LOW);
-      digitalWrite(LEDY, HIGH);
-      delay(100);
-    }
-  }  
+    digitalWrite(LEDR, HIGH);
+    digitalWrite(LEDY, LOW);
+    delay(100);
+} else {
+    digitalWrite(LEDR, LOW);
+    digitalWrite(LEDY, HIGH);
+    delay(100);
+}
+```
 
 
 ### Use Switch to Change the Timing ###
@@ -50,40 +50,41 @@ timing pattern, from:
 * both LEDs flashing for a long-ish time (1s), to
 * both LEDs flashing for a much shorter time (0.2s).
 
-    int SW1=13;
-    int SW2=12;
+```int SW1=13;
+int SW2=12;
+
+int LEDR=4;
+int LEDY=3;
+
+int DIT = 100;
+int DAH = 1000;
+
+int onTime;
+int offTime;
+
+void setup(void) {
+    pinMode(SW1,INPUT);
+    pinMode(SW2,INPUT);
+    pinMode(LEDR,OUTPUT);
+    pinMode(LEDY,OUTPUT);
+    digitalWrite(LEDR, LOW);
+    digitalWrite(LEDY, LOW);
+    onTime  = DIT;
+    offTime = 1000;
+}
     
-    int LEDR=4;
-    int LEDY=3;
-    
-    int DIT = 100;
-    int DAH = 1000;
-    
-    int onTime;
-    int offTime;
-    
-    void setup(void) {
-      pinMode(SW1,INPUT);
-      pinMode(SW2,INPUT);
-      pinMode(LEDR,OUTPUT);
-      pinMode(LEDY,OUTPUT);
-      digitalWrite(LEDR, LOW);
-      digitalWrite(LEDY, LOW);
-      onTime  = DIT;
-      offTime = 1000;
-    }
-    
-    void loop(void) {
-      if (digitalRead(SW1) == HIGH) {
+void loop(void) {
+    if (digitalRead(SW1) == HIGH) {
         onTime = DAH;
-      } else {
+    } else {
         onTime = DIT;
-      }
-    
-      digitalWrite(LEDR, HIGH);
-      digitalWrite(LEDY, HIGH);
-      delay(onTime);
-      digitalWrite(LEDR, LOW);
-      digitalWrite(LEDY, LOW);
-      delay(offTime);
-    }  
+    }
+
+    digitalWrite(LEDR, HIGH);
+    digitalWrite(LEDY, HIGH);
+    delay(onTime);
+    digitalWrite(LEDR, LOW);
+    digitalWrite(LEDY, LOW);
+    delay(offTime);
+}
+```
