@@ -7,7 +7,7 @@ This circuit only needs:
 * 2 high resistors, approximately 10KΩ
 * 1 red LED
 * 1 yellow LED
-* 2 smaller resitors, approximately 330Ω
+* 2 smaller resistors, approximately 330Ω
 
 
 It is assumed that the board is powered through a USB cable (not shown in the circuit diagram).
