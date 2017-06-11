@@ -1,56 +1,67 @@
-### The simple `blink` function ###
+## A Sketch with a User-Defined Function ##
 
-The following sketch uses the `blink` function described in the [intro to this section](index.html).
+Of course, every Arduino sketch by default has two 
+user-defined functions:
 
-    int ledPin = 13;    // Pin number for the on-board LED
+* `init()` and 
+
+* `loop`.
+
+This example below is a case where the sketch employs another function.
+
+### Signalling the Morse Code for "SOS" Using the on-Board LED ###
+
+The following sketch defines two user-defined functions:
+
+* `initLed`, which is invoked only once, from within the `init` function.
+
+* `blink`, which is repeatedly invoked within the `loop` function.
+
+All of the timing specs are from the Wikipedia 
+description of [Morse Code](https://wikipedia.org/wiki/Morse_code).
+Each iteration of the statements in `loop` should produce a light
+signal that would be interpreted as "SOS".
+
+    int ledPin = 13;               // Pin number for the on-board LED
+
+    int dit = 100;                 // Morse code "dit", 0.1s 
+    int dah = 3 * dit;             // Morse code "dah", 3 times the length of a dit
+
+    int interBitDelay = dit;       // Delay between bits of one char
+    int interCharDelay = 3 * dit;  // Delay between one char and the next char
+    int interWordDelay = 7 * dit;  // Delay after each word.
     
     void setup() {
-        pinMode(ledPin,OUTPUT);
+        initLED(ledPin);
+        blink(ledPin, 100, 1000);  // blink for only 0.1s
     }
     
     void loop() {
-        blink(3);       // Execute 3 blinks 
-        delay(2000);    // Pause before the next sequence of blinks
+        blink(ledPin, dit, interBitDelay);     // Dit-Dit-Dit == Morse code 'S'
+        blink(ledPin, dit, interBitDelay);     
+        blink(ledPin, dit, interCharDelay);     
+
+        blink(ledPin, dah, interBitDelay);     // Dah-Dah-Dah == Morse code 'O'
+        blink(ledPin, dah, interBitDelay);     
+        blink(ledPin, dah, interCharDelay);     
+
+        blink(ledPin, dit, interBitDelay);     // Dit-Dit-Dit == Morse code 'S'
+        blink(ledPin, dit, interBitDelay);     
+        blink(ledPin, dit, interCharDelay);     
+
+        digitalWrite(ledPin, LOW);             // Longer delay til next word
+        delay(interWordDelay);
     }
     
-    void blink(int howMany) {
-        for (int i=0; i<howMany; i++) {
-            digitalWrite(ledPin, HIGH);
-            delay(250);
-            digitalWrite(ledPin, LOW);
-            delay(250);
-        }
-    }
-
-### A `blink` function with several parameters ###
-
-The following sketch invokes a function, `customBlink()`, which takes 3 arguments:
-
-* the first argument is an `int`, and it is the number of blinks to execute
-
-* the second argument is an `unsigned long`, and it is the time the LED will be `HIGH` or `LOW`
-
-* the third argument is also `unsigned long`, and it is the time between blinks.
-
-#
-    int ledPin = 13;    // Pin number for the on-board LED
-    
-    void setup() {
+    void initLED(int pin) {
         pinMode(ledPin,OUTPUT);
+        digitalWrite(pin, LOW);
     }
-    
-    void loop() {
-        customBlink(2,200,300);       // Execute 3 blinks 
-        delay(2000);    // Pause before the next sequence of blinks
-    }
-    
-    void customBlink(int howMany, unsigned long blinkTime, unsigned long delayBetweenBlinks) {
-        for (int i=0; i<howMany; i++) {
-            digitalWrite(ledPin, HIGH);
-            delay(blinkTime);
-            digitalWrite(ledPin, LOW);
-            delay(blinkTime);
-        }
-        delay(delayBetweenBlinks);
+
+    void blink(int pinNumber, int onTime, int offTime) {
+        digitalWrite(pinNumber, HIGH);
+        delay(onTime);
+        digitalWrite(ledPin, LOW);
+        delay(offTime);
     }
 

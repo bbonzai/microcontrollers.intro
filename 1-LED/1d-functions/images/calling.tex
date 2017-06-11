@@ -1,0 +1,55 @@
+\documentclass[xcolor=table]{article}
+\usepackage{ragged2e}
+\usepackage{pstricks}
+\usepackage{pst-eps}
+\usepackage{pstricks-add}
+\usepackage{anyfontsize}
+\usepackage{pifont}
+\usepackage{DejaVuSansMono}
+\usepackage{libertine}
+\begin{document}
+\TeXtoEPS
+\begin{pspicture}(0,0)(30,18)
+\fontsize{20}{22}\selectfont
+%\rput[bl](0,0){\psgrid(0,0)(30,20)}
+\rput[bl](0,0){%
+\begin{minipage}[t]{2.0\linewidth}
+\fontfamily{DejaVuSansMono-TLF}\selectfont%
+int RLED = 3;\\[10pt]
+int YLED = 3;\\[10pt]
+int GLED = 3;\\[20pt]
+
+void loop (void) \{ \\[10pt]
+\hspace*{1cm}turnOn(RLED, 2000);\\[10pt]
+\hspace*{1cm}turnOn(YLED, 250);\\[10pt]
+\hspace*{1cm}turnOn(GLED, 1000);\\[10pt]
+\}\\[20pt]
+
+void turnOn (int pin, int onTime) \{ \\[10pt]
+\hspace*{1cm}turnOn(pin, onTime);\\[10pt]
+\hspace*{1cm}turnOn(pin, onTime);\\[10pt]
+\hspace*{1cm}turnOn(pin, onTime);\\[10pt]
+\}
+\end{minipage}
+}
+
+\libertine%
+\fontshape{it}\fontsize{30}{36}\selectfont%
+%
+% Global variables
+%
+\rput[l](17.2,15.3){\parbox[l]{11in}{\textcolor{blue}{\raggedright Global variables}}}
+\rput[l](16.8,15){\psbrace[linecolor=blue,braceWidthInner=20pt,braceWidthOuter=20pt,linewidth=0.04](-1.4,-1.2)(-1.4,1.5){}}
+%
+% Calling function
+%
+\rput[l](17.2,9.7){\parbox[l]{11in}{\textcolor{blue}{\textup{loop} is the calling function}}}
+\rput[l](16.8,10){\psbrace[linecolor=blue,braceWidthInner=20pt,braceWidthOuter=20pt,linewidth=0.04](-1.4,-2.4)(-1.4,1.8){}}
+%
+% Called function
+%
+\rput[l](17.2,2.7){\parbox[l]{11in}{\textcolor{blue}{\textup{turnOn} is the called function}}}
+\rput[l](16.8,2.4){\psbrace[linecolor=blue,braceWidthInner=20pt,braceWidthOuter=20pt,linewidth=0.04](-1.4,-1.5)(-1.4,2.4){}}
+\end{pspicture}
+\endTeXtoEPS
+\end{document}
