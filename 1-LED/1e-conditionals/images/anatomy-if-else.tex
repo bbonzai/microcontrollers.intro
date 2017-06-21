@@ -1,0 +1,46 @@
+\documentclass[xcolor=table]{article}
+\usepackage{ragged2e}
+\usepackage{pstricks}
+\usepackage{pst-text}
+\usepackage{pst-eps}
+\usepackage{pstricks-add}
+\usepackage{anyfontsize}
+\usepackage{DejaVuSansMono}
+\usepackage{libertine}
+\begin{document}
+\TeXtoEPS
+\begin{pspicture}(-0.5,0)(23, 10.5)
+\fontsize{20}{22}\selectfont
+%\rput[bl](0,0){\psgrid(-0.50,0)(23,11)}
+\rput[bl](0,0){%
+\begin{minipage}[t]{5.0\linewidth}
+\fontfamily{DejaVuSansMono-TLF}\selectfont%
+\textcolor{red}{if (}nloop  > 3000\textcolor{red}{) \{} \\[10pt]
+\hspace*{1.0cm}\textcolor{black}{digitalWrite(redLED, HIGH);} \\[10pt]
+\hspace*{1.0cm}\textcolor{black}{digitalWrite(greenLED, LOW);} \\[10pt]
+\hspace*{1.0cm}\textcolor{black}{nloop = 0;} \\[10pt]
+\hspace*{1.0cm}\textcolor{red}{\} else \{} \\[10pt]
+\hspace*{1.0cm}\textcolor{black}{nloop = nloop + 1;} \\[10pt]
+\textcolor{red}{\}}
+\end{minipage}
+}
+\libertine%
+\fontshape{it}\fontsize{30}{32}\selectfont%
+%
+% test(s)
+%
+\rput[b](4.3,8.8){\textcolor{blue}{test(s)}}
+\rput[b](4.3,8.8){\psbrace[linecolor=blue,braceWidthInner=15pt,braceWidthOuter=15pt,linecolor=blue,linewidth=0.04](2.5,-1.2)(-2.5,-1.2){}}
+%
+% true block
+%
+\rput[l](15.0,5.15){\textcolor{blue}{test-is-\textup{true} block}}
+\rput[l](15.0,5.15){\psbrace[linecolor=blue,braceWidthInner=15pt,braceWidthOuter=15pt,linewidth=0.04](-1.4,-2.1)(-1.4,2.1){}}
+%
+% false block
+%
+\rput[l](15.0,1.5){\textcolor{blue}{test-is-\textup{false} block}}
+\rput[l](15.0,1.5){\psbrace[linecolor=blue,braceWidthInner=15pt,braceWidthOuter=15pt,linewidth=0.04](-1.4,-1.0)(-1.4,1.0){}}
+\end{pspicture}
+\endTeXtoEPS
+\end{document}

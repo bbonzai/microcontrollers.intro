@@ -1,0 +1,61 @@
+\documentclass[xcolor=table]{article}
+\usepackage{ragged2e}
+\usepackage{pstricks}
+\usepackage{pst-text}
+\usepackage{pst-eps}
+\usepackage{pstricks-add}
+\usepackage{anyfontsize}
+\usepackage{pifont}
+\usepackage{DejaVuSansMono}
+\usepackage{libertine}
+\usepackage{pst-node}
+\begin{document}
+\TeXtoEPS
+\begin{pspicture}(0,0)(22,15)
+\fontsize{20}{22}\selectfont
+%\rput[bl](0,0){\psgrid(0,0)(22,15)}
+\rput[bl](0,2.5){%
+\begin{minipage}[t]{5.0\linewidth}
+\fontfamily{DejaVuSansMono-TLF}\selectfont%
+\textcolor{red}{int i = 0;}\\[40pt]
+while (\textcolor{red}{i < 3}) \{ \\[10pt]
+\hspace*{1.0cm}digitalWrite(redLED, HIGH); \\[10pt]
+\hspace*{1.0cm}delay(250); \\[10pt]
+\hspace*{1.0cm}digitalWrite(redLED, LOW); \\[10pt]
+\hspace*{1.0cm}delay(250); \\[10pt]
+\hspace*{1.0cm}\textcolor{red}{i = i + 1}; \\[10pt]
+\}\end{minipage}}
+
+\libertine%
+\fontshape{it}\fontsize{30}{32}\selectfont%
+%\psset{arrowscale=2.0}
+%
+% Initialization
+%
+\rput[b](2.1,14.1){\textcolor{blue}{initialization}}
+\rput[b](2.1,14.1){\psbrace[linecolor=blue,braceWidthInner=15pt,braceWidthOuter=15pt,linewidth=0.04](1.9,-1.8)(-1.9,-1.8){}}
+\rput[b](2.1,14.1){\psline[linewidth=0.05,linecolor=blue](0,-0.8)(0,-0.3)}
+%
+% Termination
+%
+\rput[bl](7.4,11.8){\textcolor{blue}{termination}}
+\rput[bl](7.4,11.8){\psbrace[linecolor=blue,braceWidthInner=8pt,braceWidthOuter=8pt,linewidth=0.04](-2.3,-1.7)(-4.5,-1.7){}}
+\pnode(10.3,11.6){A}
+\pnode(4,10.7){B}
+\nccurve[linewidth=0.08,angleA=-110,angleB=70,armA=4pt,armB=4pt,arrowsize=0.4,linecolor=blue]{->}{A}{B}
+%
+% Statements
+%
+\rput[l](14.3,6.0){\parbox[l]{3in}{\textcolor{blue}{\raggedright statement(s) wrapped in braces}}}
+\rput[l](13.8,6.0){\psbrace[linecolor=blue,braceWidthInner=15pt,braceWidthOuter=15pt,linewidth=0.04](-0.8,-3.2)(-0.8,3.5){}}
+%
+% Iteration
+%
+\rput[bl](7.9,1.5){\textcolor{blue}{iteration}}
+\rput[bl](7.9,1.5){\psbrace[linewidth=0.04,linecolor=blue,braceWidthInner=8pt,braceWidthOuter=8pt,linewidth=0.04](-6.8,2.1)(-3.1,2.1){}}
+\pnode(9.7,2.2){A}
+\pnode(2.95,2.95){B}
+\nccurve[linewidth=0.08,angleA=110,angleB=-70,armA=4pt,armB=5pt,arrowsize=0.4,linecolor=blue]{->}{A}{B}
+\end{pspicture}
+\endTeXtoEPS
+\end{document}
