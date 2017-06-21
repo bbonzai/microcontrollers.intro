@@ -1,0 +1,63 @@
+\documentclass[xcolor=table]{article}
+\usepackage{ragged2e}
+\usepackage{csquotes}
+\usepackage{pstricks}
+\usepackage{pst-eps}
+\usepackage{pstricks-add}
+\usepackage{anyfontsize}
+\usepackage{pifont}
+\usepackage{DejaVuSansMono}
+\usepackage{libertine}
+\begin{document}
+\TeXtoEPS
+\begin{pspicture}(0,0)(24,15)
+\fontsize{20}{22}\selectfont
+%\rput[bl](0,0){\psgrid(0,0)(24,15)}
+\rput[bl](0,0){%
+\begin{minipage}[t]{2.0\linewidth}
+\fontfamily{DejaVuSansMono-TLF}\selectfont%
+for (\textcolor{red}{int i = 0}; \textcolor{red}{i < 3}; \textcolor{red}{i = i+1}) \{ \\[10pt]
+\hspace*{1cm}\textcolor{black}{digitalWrite(redLED, HIGH);} \\[10pt]
+\hspace*{1cm}\textcolor{black}{delay(250);} \\[10pt]
+\hspace*{1cm}\textcolor{black}{digitalWrite(redLED, LOW);} \\[10pt]
+\hspace*{1cm}\textcolor{black}{delay(250);} \\[10pt]
+\}\end{minipage}}
+\libertine%
+\fontshape{it}\fontsize{30}{32}\selectfont%
+%
+% Initialization
+%
+\rput[b](4.2,13.5){\textcolor{blue}{initialization}}
+\rput[b](4.2,13.5){\psbrace[linecolor=blue,braceWidthInner=15pt,braceWidthOuter=15pt,linewidth=0.04](1.85,-7.0)(-1.85,-7.0){}}
+\rput[b](4.2,13.5){\psline[linewidth=0.05,linecolor=blue](0,-5.9)(0,-0.3)}
+%
+% Termination
+%
+\rput[b](7.75,10.5){\textcolor{blue}{termination}}
+\rput[b](7.75,10.5){\psbrace[linecolor=blue,braceWidthInner=15pt,braceWidthOuter=15pt,linewidth=0.04](1.15,-4.0)(-1.15,-4.0){}}
+\rput[b](7.75,10.5){\psline[linewidth=0.05,linecolor=blue](0,-2.9)(0,-0.3)}
+
+%
+% Iteration
+%
+\rput[b](11.3,7.9){\textcolor{blue}{iteration}}
+\rput[b](11.3,7.9){\psbrace[linecolor=blue,braceWidthInner=15pt,braceWidthOuter=15pt,linewidth=0.04](1.4,-1.4)(-1.4,-1.4){}}
+\rput[b](11.3,7.9){\psline[linewidth=0.05,linecolor=blue](0,-0.5)(0,-0.25)}
+%
+% Statements
+%
+\rput[l](15.4,3.7){\parbox[l]{3in}{\textcolor{blue}{\raggedright statement(s) wrapped in braces}}}
+\rput[l](15.4,3.7){\psbrace[linecolor=blue,braceWidthInner=15pt,braceWidthOuter=15pt,linewidth=0.04](-1.2,-2.7)(-1.2,2.4){}}
+%\rput[bl](12.4,1){\parbox[l]{11in}{\textcolor{blue}{\raggedright statement(s) wrapped in braces}}}
+%\psset{linecolor=blue,linewidth=0.04,arrowscale=2.25}
+%\pnode(15.4,3.2){A}
+%\pnode(14.8,8.7){B}
+%\nccurve[angleA=60]{->}{A}{B}
+%\pnode(12.2,1.2){A}
+%\pnode(0.6,3.05){B}
+%\nccurve[angleA=180,angleB=0,armB=1]{->}{A}{B}
+%\rput[bl](0,0){\psline{->}(13.4,4.2)(10.4,6.4)}
+%\rput[bl](0,0){\psline{->}(13.4,1.8)(0.6,1)}
+\end{pspicture}
+\endTeXtoEPS
+\end{document}
