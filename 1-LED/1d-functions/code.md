@@ -1,4 +1,4 @@
-## A Sketch with a User-Defined Function ##
+## Sketches with a User-Defined Function ##
 
 Of course, every Arduino sketch by default has two 
 user-defined functions:

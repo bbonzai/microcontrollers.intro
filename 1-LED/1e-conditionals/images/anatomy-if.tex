@@ -1,0 +1,48 @@
+\documentclass[xcolor=table]{article}
+\usepackage{ragged2e}
+\usepackage{pstricks}
+\usepackage{pst-text}
+\usepackage{pst-eps}
+\usepackage{pstricks-add}
+\usepackage{anyfontsize}
+\usepackage{pifont}
+\usepackage{DejaVuSansMono}
+\usepackage{libertine}
+\begin{document}
+\TeXtoEPS
+\begin{pspicture}(-0.50,0.5)(24,7.5)
+\fontsize{20}{22}\selectfont
+%\rput[bl](0,0){\psgrid(0,0)(24,7.5)}
+\rput[bl](0,0){%
+\begin{minipage}[t]{5.0\linewidth}
+\fontfamily{DejaVuSansMono-TLF}\selectfont%
+\textcolor{red}{if (}digitalRead(button) == LOW\textcolor{red}{) \{} \\[10pt]
+\hspace*{1cm}\textcolor{black}{digitalWrite(redLED, HIGH);} \\[10pt]
+\hspace*{1cm}\textcolor{black}{digitalWrite(greenLED, LOW);} \\[10pt]
+%	\textcolor{black}{\}} else \textcolor{black}{\{} \\[20pt]
+%
+%\hspace{5.0cm}\textcolor{black}{digitalWrite(LED, LOW);} \\[20pt]
+\textcolor{red}{\}}
+\end{minipage}
+}
+\libertine%
+\fontshape{it}\fontsize{30}{32}\selectfont%
+%
+% test(s)
+%
+\rput[b](7.25,5.5){\textcolor{blue}{test(s)}}
+\rput[b](7.25,5.5){\psbrace[linecolor=blue,braceWidthInner=15pt,braceWidthOuter=15pt,linewidth=0.04](5.4,-1.2)(-5.4,-1.2){}}
+%
+% statements in braces
+%
+\rput[l](15.5,2.45){\parbox[l]{3in}{\textcolor{blue}{\raggedright statement(s) wrapped in braces}}}
+\rput[l](15.2,3.45){\psbrace[linecolor=blue,braceWidthInner=15pt,braceWidthOuter=15pt,linewidth=0.04](-1.0,-2.7)(-1.0,0.4){}}
+%\pnode(15.4,3.2){A}
+%\pnode(14.8,8.7){B}
+%\nccurve[angleA=60]{->}{A}{B}
+%\pnode(12.2,1.2){A}
+%\pnode(0.6,3.05){B}
+%\nccurve[angleA=180,angleB=0,armB=1]{->}{A}{B}
+\end{pspicture}
+\endTeXtoEPS
+\end{document}
