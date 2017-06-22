@@ -41,5 +41,5 @@ point in your program.
 * Functions take "parameters", so that their outcome can be adjusted for
 different inputs.
 
-`functions` are covered in [packet 2d](2d-functions).
+`functions` are covered in [packet 1d](1d-functions).
 

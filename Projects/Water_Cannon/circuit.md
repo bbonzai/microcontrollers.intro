@@ -9,7 +9,7 @@ for your purposes, even when the gate-to-source voltage is only 5V), and
 * a zener diode
 
 This circuit is an embellishment of the 
-[circuit for a simple solenoid motor](../../4-Motors/4d-Solenoids/circuit.html). 
+[circuit for a simple solenoid motor](../../5-Motors/5d-Solenoids/circuit.html). 
 The features which are added are 
 
 * an 8Ω speaker which produces the pitches in the "melody" being played, and
@@ -27,7 +27,7 @@ The following diagrams introduce these circuit elements one at a time.
 
 To accompany the water display with "music" a high-power speaker is required.
 The circuitry required for this speaker is exactly the same as the
-[circuit for speakers](../../3-Sound/3d-speakers/circuit.html). 
+[circuit for speakers](../../4-Sound/4d-speakers/circuit.html). 
 
 | Circuit with Speaker                     |
 |:----------------------------------------:|

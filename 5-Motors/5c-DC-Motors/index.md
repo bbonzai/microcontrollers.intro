@@ -23,7 +23,7 @@ Like speakers, DC motors can require a lot of power.  In general, the
 current provided by a digital I/O pin on an Arduino is insufficient
 to provide this power.
 
-To solve this problem, as in the case of the [8Ω speaker controlled by an Arduino](../../3-Sound/3d-speakers/index.html),
+To solve this problem, as in the case of the [8Ω speaker](../../4-Sound/4d-speakers/index.html),
 the Arduino is used not to control the power on the motor, but to control the power on
 a transistor which is a gate between an external power supply and the motor.
 

@@ -10,7 +10,7 @@ The components required for this circuit are:
 for your purposes, even when the gate-to-source voltage is only 5V), and
 * a zener diode
 
-This circuit will look *a lot* like the [circuit for the toy motor](../4c-DC-Motors/circuit.html), 
+This circuit will look *a lot* like the [circuit for the toy motor](../5c-DC-Motors/circuit.html), 
 with the exception:
 
 * Pin 3 will be used for digital output rather than analog (PWM) output.

@@ -20,7 +20,7 @@ which produce the light pattern for the digits 0 through 3:
 > * To make a `3`, make 3 short blinks, followed by a `for` loop that makes 2 long blinks.
 
 > > (For a much easier way to implement digits in Morse code, see the packet 
-> > on writing [functions](../4-functions)).
+> > on writing [functions](../1d-functions)).
 
 5. Use the LED to spell out "help" instead of "SOS".  Some of the letters
 in "help" are well suited to using `for` loops, and others are not.

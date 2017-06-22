@@ -11,7 +11,7 @@ which are integrated into water valves:
 
 Both of these devices are *extremely* power hungry.  The Arduino cannot
 possibly provide the current to make them work.  However, as in the
-case of [high-powered speakers](../../3-Sound/3d-speakers), the Arduino can
+case of [high-powered speakers](../../4-Sound/4d-speakers), the Arduino can
 be used to control when/how the current from another device to the
 solenoid is turned on or off.  
 

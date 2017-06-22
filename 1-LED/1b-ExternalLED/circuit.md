@@ -44,9 +44,9 @@ out, taking advantage of the internal wiring of the breadboard to make the
 actual electrical connections.  For more detail on the internal layout of 
 breadboards, see this [explanation of breadboards](index.html).
 
-Both of the drawings shown above assume that you will also connect some
-source of power to your Arduino board, e.g., the USB plug of your computer
-or an external battery, as shown in [this page](./1-blink-onboard/circuit.html).
+Both of the drawings above assume that you will also connect some source of 
+power to your Arduino board, e.g., the USB plug of your computer
+or an external battery, as shown in [this page](../1a-OnBoardLED/circuit.html).
 
 ### Which Arduino pin should you use? ###
 

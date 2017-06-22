@@ -23,7 +23,7 @@ To connect an Arduino UNO to a computer, the USB cable must be of the form:
 
 (In the diagram above, the green rounded rectangle near the middle of the controller
 board is there to highlight the region of the onboard LED. 
-The [demo](http:./demo.html) shows this LED blinking ON and OFF.)
+The [demo](demo.html) shows this LED blinking ON and OFF.)
 
 ## Power From a Battery Pack ##
 

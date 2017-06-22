@@ -10,9 +10,9 @@ For this circuit, you will only need:
 
 Either of the following circuits will work for this purpose.
 
-| Pushbutton connections both on one side | Pushbutton connections on alternate sides |
-|:---------------------------------------:|:-----------------------------------------:|
-| [](images/pushbuttonAlone1_bb.png)      | [](images/pushbuttonAlone2_bb.png)        |
+| Pushbutton connections both on one side  | Pushbutton connections on alternate sides |
+|:----------------------------------------:|:-----------------------------------------:|
+| [](images/pushbuttonAlone1_bb.svg.png)   | [](images/pushbuttonAlone2_bb.svg.png)    |
 
 ### Add an LED; Turn It `ON` When the Switch Goes `HIGH` ### {#pulldown} 
 
@@ -46,12 +46,7 @@ will then turn the LED `OFF`.
 | In this case, the pin is `LOW` unless the button is pushed |
 | [](images/pushbuttonInputLow_bb.svg.png)                   |
 
-### Add an LED; Turn It `ON` When the Switch Goes `LOW` ### {#pulldown} 
-
-
-### Switch momentarily connects to GND ### {#pullup}
-
-Data Pin is by default at 5V.
+### Add an LED; Turn It `ON` When the Switch Goes `LOW` ### {#pullup} 
 
 In this case, one end of the switch is connected to `GND`, and the other
 end to an input line (12).  The input line is configured with:
