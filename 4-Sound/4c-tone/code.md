@@ -2,7 +2,7 @@
 
 The following sketch makes three sounds:
 
-* Middle C for 0.25s, using the `makeSound()` function introduced in the packe on [DoubleSound](../3b-DoubleSound/code.html).
+* Middle C for 0.25s, using the `makeSound()` function introduced in the packe on [DoubleSound](../4b-DoubleSound/code.html).
 * Middle C for 0.5s, using the `tone()` function built into the Arduino program.
 
 Note that in order to hear the sound made by `tone()`, it is necessary to add 

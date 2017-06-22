@@ -14,7 +14,7 @@ The circuit is shown below.
 | ![](images/servo-w-battery-pot_bb.svg.png) |
 
 Connect the Arduino, servo and battery as in the 
-[introductory packet on servos](../../4-Motors/4a-Servo-Set-Position/circuit.html).
+[introductory packet on servos](../../5-Motors/5a-Servo-Set-Position/circuit.html).
 
 Then add the trimpot anywhere on your breadboard, with the following connections:
 
