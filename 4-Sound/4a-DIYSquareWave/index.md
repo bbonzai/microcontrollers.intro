@@ -3,7 +3,7 @@
 This packet shows how to create sounds on a simple piezoelectric buzzer.
 
 The technique used is *almost* the same as that used to [blink
-an external LED](../1-LED/1b-ExternalLED).  The difference is:
+an external LED](../../1-LED/1b-ExternalLED).  The difference is:
 
 * the LED turns `ON` when you set the I/O pin to which its 
 connected `HIGH` (using `digitalWrite(HIGH)`).

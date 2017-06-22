@@ -1,7 +1,7 @@
 ## Code for a Pushbutton as a Latch ##
 
 These sketches show how debouncing improves the reliability
-of a pushbutton.  All of them use the [circuit](../circuit.html#pulldown)
+of a pushbutton.  All of them use the [circuit](../2b-pushbuttons/circuit.html#pulldown)
 with an LED and a pushbutton attached to a digital I/O pin with an 
 external pull-down resistor.
 

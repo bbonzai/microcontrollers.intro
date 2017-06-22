@@ -9,7 +9,7 @@ The components required for this circuit are:
 * a transistor
 * a zener diode
 
-This circuit will look *exactly* like the [circuit for the 8Ω speaker](../../3-Sound/3d-speakers/circuit.html), with
+This circuit will look *exactly* like the [circuit for the 8Ω speaker](../../4-Sound/4d-speakers/circuit.html), with
 two exceptions:
 
 * even though both circuits use Pin 3 of the Arduino for control, in this case, Pin 3 will be used

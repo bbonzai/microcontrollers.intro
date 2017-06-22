@@ -47,13 +47,13 @@ shaft rotate to a different position.  This technique is called "Pulse Width Mod
 #### A Pulse Wave is a Like a Square Wave ####
 
 Square waves were introduced in the packet on 
-[DIY_Square Waves](../2-Buzzer/1-DIYSquareWave).
+[DIY_Square Waves](../../4-Sound/4a-DIYSquareWave).
 Square waves are LOW for half a period, and HIGH for half of its period.
 A pulse wave, in contrast, is LOW for most of its period, and HIGH for a small
 fraction of its period, as shown below.
 
-| A Pulse Wave             |
-|:------------------------:|
+| A Pulse Wave               |
+|:--------------------------:|
 | ![](images/pulse-wave.png) |
 
 #### Pulse Waves for Servos ####

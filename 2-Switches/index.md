@@ -5,7 +5,7 @@ a "switch" to turn LEDs on and off.
 
 What if you want manual control, so that *you* can switch the Arduino's 
 functioning `ON` or `OFF`?  One way to do this is the Serial Console, 
-introduced in [packet 1g-SerialConsole](../1g-SerialConsole).
+introduced in [packet 1g-SerialConsole](../../1-LED/1g-SerialConsole).
 
 You can also use any one of a variety of mechanical switches to exert
 human control over the Arduino's behaviour.  This packet illustrates some 
@@ -41,11 +41,11 @@ Packet [2a-slide-switches](2a-slide-switches)
 : some statement or block of your code by pushing the handle from one side
 : to the other.
 
-Packet [2b-pushbutton](2b-pushbutton) 
+Packet [2b-pushbuttons](2b-pushbuttons) 
 : introduces pushbutton switches. 
 
 Packet [2c-latches](2c-latches)
-: uses the same hardware and circuitry as packet [2b-pushbutton](2b-pushbutton),
+: uses the same hardware and circuitry as packet [2b-pushbuttons](2b-pushbuttons),
 : but shows how to use the pushbutton in a "latching" mode, instead of a 
 : "press-and-hold" mode.  This simple change will introduce the phenomenon of 
 : switch bouncing, and show you how to overcome it.

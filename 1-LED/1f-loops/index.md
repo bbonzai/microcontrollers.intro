@@ -31,7 +31,7 @@ a `for` loop:
 > > **Termination** (Test the Stop condition): `i < 3`
 > > : In this case, the termination statement tested whether the counter is less than `3`.
 > > : The loop stops executing when this statement is `true`.  Any of the boolean 
-> > : tests described in the packet on [conditional](../1-conditionals) 
+> > : tests described in the packet on [conditional](../1e-conditionals) 
 > > : statements can be used in the termination test.
 > > 
 > > **Iteration** (To-Do after every iteration): `i = i + 1`
