@@ -1,7 +1,3 @@
-# microcontrollers.intro #
-
-This repository contains instructional resources for teaching the basics of microcontrollers.
-
 ## What is a microcontroller? ##
 
 A microcontroller is an integrated circuit (IC).  One microcontroller
