@@ -1,57 +1,147 @@
-## Code to Control a Servo Using a Potentiometer ##
+## Code to Using a Potentiometer ##
 
-This sketch reads the current voltage on a pot, and sets the angle of a servo
-in response.  So:
+### Read the Pot Voltage ###
 
-| Pot Setting             | Pot Voltage                    | Servo Setting                   |
-|:-----------------------:|:------------------------------:|:--------------------------------|
-| Minimum value           | 0V                             | 0°                              |
-| (an Intermediate value) | (some voltage between 0 and 5) | (some angle between 0° and 180° |
-| Maximum value           | 5V                             | 180°                            |
+This sketch reads the voltage on a pot, using the arduino function `analogRead()`.
+It then writes that function to the Serial Console, waits 1 second, and then
+reads the pot again.
 
-## Using the Pot ##
+Reading the pot voltage is done using the arduino function `analogRead()`.
+This function takes one parameter: the pin number to read.  
+If the pot is wired up as shown in the [circuit](circuit.html#noled), then
+the pin number being read is Analog I/O pin 0 (where the center pin of the 
+pot is attached).  As always, it is good practice *not* to use the I/O pin
+number in your invocation of `analogRead()`, but instead to use a name
+that was attached to the I/O pin number in the header (outside of, and before,
+the `setup()` or `loop()` functions:
 
-To read the voltage from the pot, use the Arduino function `analogRead()`.  This function
-takes one parameter, which is the pin number to read.  
+    int POT = 0;             // Place this before setup() or loop()
 
-Input to `analogRead()`
-: any digit from 0 through 5 (for ports A0 through A5 on the UNO)
+Then the voltage on that pin can be read at any time using: 
 
-Output from `analogRead()`
-: an integer from 0 to 1023
+    analogRead(POTPIN);      // Use this in the loop() function
 
-To set the servo angle to something in the range 0° to 180°, the range of values
-produced by `analogRead()` must be converted into a range of values suitable for 
-the Servo `.write()` method, i.e. 0 through 180.  To do this, use the Arduino `map()`
-function, which maps an input value (`val`) in the range (`inputmin`...`inputmax`) 
-to the range (`outputmin`...`outputmax`).  
+It is probably useful to store that reading in a variable, which can be
+an ordinary `int`:
 
-Example: 
-: Suppose the voltage on the pot signal pin is 2.5V. 
-: This is read by the microcontroller's analog-to-digital converter as the value 512.
-: To convert this number into an angle in the range 0 through 180 required
-: by the servo, use:
-:
-: >     angle = map(512,0,1023,0,180) 
+    int vInput = analogRead(POTPIN);
 
-The final sketch to control the servo position using the pot is:
+The output from `analogRead()` will be some value between 0 and 1023.
 
-    #include <Servo.h>
-    
-    int servoPin=9;             // This is digital pin 9, aka "9"
-    int potPin=4;               // This is analog pin 4, aka "A4"
+A sketch which just displays the value read from the pot once a second
+is shown below:
 
-    Servo servo;
+    int POTPIN = 0;               // This is analog pin 0, aka "A0"
     
     void setup(){  
-      servo.write(90);          // Set default servo angle to the middle of its range
-      servo.attach(servoPin);   // Power up the servo
-      delay(100);               // Give the servo time to get there
+        pinMode(POT, INPUT);
+        Serial.begin(57600);
     }
     
     void loop(){
-      int potSetting=analogRead(potPin);
-      int angle=map(potSetting,0,1023,0,179);
-      servo.write(angle);
-      delay(200);
+      int vInput = analogRead(POTPIN);
+      Serial.println(vInput);
+      delay(1000);
     }
+
+### Control the Brightness of an LED with the POT ###
+
+This sketch uses the [circuit with an LED attached](circuit.html#led).
+
+Reading the pot is done the same as above.  Now the task is to send
+*analog* output to another pin.  This only works on the digial I/O pins 
+that are labelled with a small tilde (`~`) beside the pin number. 
+Such pins can write not just digital voltage values (0V and 5V), but 
+any one of 256 values in between, using a technique called "Pulse Width
+Modulation".  This is a method of turning the voltage `ON` (i.e., 5V)
+and then `OFF` (i.e., 0V) rapidly, so that the average voltage is some
+value between 0V and 5V.  The relative amount of time spent in the `ON`
+state determines the value of the voltage sensed by the device attached
+to the pin.
+
+Since `analogRead()` reports values between 0 and 1023, while
+`analogWrite()` can only output values between 0 and 255, you must
+divide the voltage read from the pot by 4 in order to compute the
+output voltage that will be written using `analogWrite()`.
+
+    int LED = 10;
+    int POTPIN = 0;
+    
+    void setup() {
+      Serial.begin(57600);
+      pinMode(LED, OUTPUT);
+      pinMode(POTPIN, INPUT);
+    }
+    
+    void loop() {
+      int vInput = analogRead(POTPIN);
+      Serial.println(vInput);
+      analogWrite(LED, vInput/4);
+      delay(1000);
+    }
+    
+### Control the blink rate of an LED using a pot ###
+
+In this example, the voltage read from the pot is used to vary the blink 
+rate of an LED.  This sketch uses the same circuit as above, and assumes 
+that the LED will be illuminated at full brightness whenever it is on.  
+
+Since, for this sketch, the LED will always be fully `ON` or `OFF`, it
+can be attached to any digital I/O pin; it doesn't have to be attached
+to one of the PWM pins.
+
+The sketch uses the voltage read from the pot to vary the LED blink 
+time from a minimum of 50 ms to a maximum of about 500ms:
+
+| Analog Input Reading | Blink Time in msec |
+|:---------------------|:-------------------| 
+| 0                    | 50 msec            |
+| 1023                 | 500 msec           |
+
+In other words, the range of analog input values (0-1023) is roughly
+twice the range of blink periods (50-500).  This desired outcome can be 
+achieved if we simply divide the analog input signal by a factor of 2, 
+then add 50 ms:
+
+    blink_time = vInput/2 + 50
+
+
+The following sketch produces the desired outcome:
+
+    int LED=10;
+    int POT=0;
+    int minBlinkTime = 50;
+    
+    void setup() {
+      Serial.begin(57600);
+      pinMode(LED, OUTPUT);
+      pinMode(POT, INPUT);
+      digitalWrite(LED, LOW);
+    }
+    
+    void loop() {
+      int vInput = analogRead(POT);
+      Serial.println(vInput);
+      blink(vInput/2 + minBlinkTime);
+    }
+    
+    void blink(int blinkTime) {
+      digitalWrite(LED, HIGH);
+      delay(blinkTime);
+      digitalWrite(LED, LOW);
+      delay(blinkTime);
+    }
+    
+For the curious:  the expression used above to calculate the 
+`blinkTime` corresponding to a given `vInput` is an approximation; using
+this expression, the maximum value of `blink_time` will actually be 
+561ms, not 500ms.  To get the exact range, 50-500ms without solving a 
+math problem, use the built-in arduino function `map()`, which
+takes 5 arguments (the analog voltage reading, and the minium and maximum
+values of the analog voltage reading and the desired blink times):
+
+    int blinkTime = map (vInput, 0, 1023, 50, 500);
+
+Then call `blink()` similarly to the above:
+
+    blink(blinkTime);

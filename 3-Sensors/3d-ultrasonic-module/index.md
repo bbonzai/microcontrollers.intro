@@ -1,6 +1,6 @@
 ## Ultrasonic Distance Sensors ## 
 
-Ultrasonic sensor work by sending out a sound wave at a particular
+Ultrasonic sensors work by sending out a sound wave at a particular
 frequency, and then measuring the amount of time it takes for the sound wave to 
 reflect off of some surface back to it.  Therefore, ultrasonic sensors have
 two parts: a sender and a receiver.  These types of sensors are frequently
@@ -19,7 +19,7 @@ and can measure their distance with a precision of 0.3cm.
 
 The two components of the HC-SR04 ultrasonic module are:
 
-* the trigger, which should be activated by setting it at a `HGH` 
+* the trigger, which should be activated by setting it at a `HIGH` 
 state for 10 µs.  This has the effect of making the trigger unit
 send out a high-frequency sound wave consisting of 8 pulses.
 This sound wave will bounce off nearby objects.
