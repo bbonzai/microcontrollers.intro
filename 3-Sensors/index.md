@@ -1,30 +1,49 @@
 ## Controlling Arduinos with Sensors ##
 
-The packets in this section will be about using various devices 
+The packets in this section show you how to use a variety of sensors
 as *inputs* to an Arduino, in order to control one or more output devices.
 
-Whereas a switch acts like an input which can be in one of two states:
-`LOW` or `HIGH`, most of the sensors described in this section can produce
-*any* value between `0V` and `5V`.  (Well, that's not exactly true since the
-Arduino can only distinguish differences larger than about 0.005V.)
+### Analog Sensors ###
 
-These "variable-output" or "analog" devices cannot be used on the digital 
-I/O pins of the Arduino.  Instead, they must be used on one of the 
-analog I/O pins labelled `A0` through `A5`.
+The first two sensors introduced in this section, a [potentiometer](3a-potentiometer)
+and a [light sensor](3b-light-sensor), are both "analog" sensors.
+That is instead of producing values which are either `LOW` (0V) or `HIGH` (5V),
+like the reading from a switch, they can produce values over the entire
+range from 0V to 5V.  The input from these "analog" devices cannot be read 
+on the digital I/O pins of the Arduino.  Instead, they must be used on one 
+of the analog I/O pins labelled `A0` through `A5`.
 
 Your sketch will read the value of the voltage produced by one of these 
 sensors using the arduino function `analogRead()`, for example:
 
-    int pin = 0; this will be interpreted as `A0` by analogRead()
-    int vIn = analogRead(pin);
+    int PIN = 0; this will be interpreted as `A0` by analogRead()
+
+    int vIn = analogRead(PIN);
 
 The function `analogRead()` will output a value between 0 and 1023.
 
-In most of the examples in this section, the value from `analogRead()` is 
-simply used to control the blink rate of an LED.  More complicated applications will
+### Digital Sensors ###
+
+Packet [3c](3c-PIR) shows how to use a Passive InfraRead (PIR) sensor to
+detect motion.  These devices produce *digital* output, i.e., their
+signal pin goes `HIGH` when motion is detected; they are therefore
+digital, not analog sensors.  Typically, PIR sensors detect motion within
+about 20 feet, but they can be adjusted to be more or less sensitive
+than that.
+
+### Other Sensors ###
+ 
+Packet [3d](3d-ultrasonic-sensor) shows how to use an ultrasonic sensor
+to detection the distance to the object in front of it.  This sensor
+not an analog sensor, nor is it a digital sensor like the PIR.  Instead,
+this sensor produces a pulse (a transition from `LOW` to `HIGH`, followed 
+by a subsequent transition back from `HIGH` to `LOW`) whose *duration*
+is used to infer the target's distance.  Using this sensor requires the
+introduction of a new, special-purpose arduino function, `pulseIn()`.
+
+### Using the Sensors to Control Something! ###
+
+In most of the examples in this section, the value from a sensor is simply used to 
+control the brightness or blink rate of an LED.  More complicated applications will
 be presented in the sections on [Sound](../4-Sound), and [Motors](../5-Motors).
 
-Some sensors require much more complicated setup and interpretation than those
-requiring a simple `analogRead()` followed by a call to the `map()` function.
-One of those is an ultrasonic module, which is described in
-packet [3e](3e-ultrasonic-module).
