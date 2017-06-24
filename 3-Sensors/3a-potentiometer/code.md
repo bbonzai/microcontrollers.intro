@@ -121,7 +121,7 @@ The following sketch produces the desired outcome:
     
     void loop() {
       int vInput = analogRead(POT);
-      Serial.println(vin);
+      Serial.println(vInput);
       blink(vInput/2 + minBlinkTime);
     }
     

@@ -11,7 +11,7 @@ The circuit is shown below.
 
 | Combining a TrimPot with an LED            |
 |:------------------------------------------:|
-| ![](images/pot_w_resistor.svg.png) |
+| ![](images/pot_w_resistor_bb.png) |
 
 When you add the trimpot to your breadboard, be sure to attach its 
 center pin to one of the digital I/O pins of the Arduino.  
