@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Intro to Microcontrollers | $title$</title>
+  <link rel="stylesheet" href="/css/default.css" type="text/css" media="screen" title="default">
+  <link rel="stylesheet" href="/css/syntax.css" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="description" content="Notes on using Arduino boards">
+  <meta name="keywords" content="IoT arduino microcontrollers">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<!-- This wrapper wraps the header and the content; it pushes the footer to the bottom of the page. -->
+<div class="wrapper"> 
+  <div id="header">
+    <div class="superHeader">
+      <div class="right">
+        <ul>
+          <li><a href="http://www.nongnu.org/avr-libc/user-manual/index.html">avr-libc</a></li>
+          <li><a href="https://www.arduino.cc/en/Reference/HomePage">Arduino</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="midHeader">
+      <div class="headerTitle">
+        <img src="/images/packets.ico"/>
+        <span id="headerSubTitle"><a href="/index.html">Introduction to Arduinos </a></span>
+      </div>
+    </div>
+    <div class="subHeader">$menu$</div>
+  </div>
+  <div class="content">$body$</div>
+</div>  <!-- End of div class="wrapper" -->
+<!-- This is all the stuff pushed to the bottom of the page -->
+<div class="push"></div>
+<div id="footer">
+  <a href="http://jaspervdj.be/hakyll/index.html" id="hakyllLink">Powered by Hakyll</a>
+  <span id="dates">
+    $if(published)$
+      <span id="publishedDate">First published $published$</span>
+      $endif$
+      $if(updated)$
+      <span id="updatedDate">Last updated $updated$</span>
+    $endif$
+  </span>
+</div>
+<!-- End of footer -->
+</body>
+</html>
