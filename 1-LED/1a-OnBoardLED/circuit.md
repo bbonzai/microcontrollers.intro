@@ -1,49 +1,53 @@
-This project requires only one connection:
+This project requires only one connection:  from the microcontroller board (UNO) to some source of
+power.  That power could be supplied by a battery or through your USB cable.
 
-    Controller board ⇒ [ Some source of power ]
+In all other packets on this site, *this power connection won't be displayed*; 
+it will be assumed.
 
-The "source of power" could be:
+## Connecting your computer to the UNO ##
 
-* a battery, or 
-* a power supply, or 
-* the USB port on your computer
+You will need to connect your computer to the UNO in order to download 
+your program to it.  This connection can also supply power, so once you have
+programmed your Arduino, then if it remains connected to your computer, it
+will commence running that program until you disconnect it or reset it.
 
-In all other packets, *this connection won't be displayed*, but it will
-be assumed.
+There are many types of USB cables, featuring not only diffences in the
+shape of their connectors, but also in the information they carry.
+All USB cables that connect to your computer have one rectangular end
+which is approximately 1/2" across; this is called a "Standard B" connector.
+The other end may have any one of several types of USB connectors. Some
+Arduino boards require a square-ish connector called "Standard A".  Others
+require a small flat connector called "micro USB".  Images are shown
+below:
 
-## Power From a USB Port ##
+| "Standard B" to "Standard A"   | "Standard B" to "MicroUSB"      |
+|:------------------------------:|:-------------------------------:|
+| ![](images/stdB_to_stdA.png)   |![](images/stdB_to_microusb.png) |    
 
-| Desktop computer connected to Arduino UNO via USB cable |
-|:-------------------------------------------------------:|
-| ![](images/desktop-blink_w_clipmask.svg.png)            |
+Whichever shape of USB cable you need, be sure to get one which is a 
+"data" USB cable.  Whereas a USB "power" cable carries only a `+5V` signal
+and a `GND` signal, a USB "data" cable **also** include data signals.
+This is essential for programming your Arduino.
 
-To connect an Arduino UNO to a computer, the USB cable must be of the form:
+## Powering the microcontroller board with a battery ##
 
-    "Standard A" (plugs into the computer) ⇒ "Standard B" (plugs into the Arduino UNO)
+Once an Arduino board has been programmed, you can detach it from your
+computer and power it from batteries.  (Otherwise Arduinos couldn't be 
+used in robots.)  A group of 1 or more batteries can be used; in any
+case, the total voltage of those batteries must lie between >7V but \<12V.
 
-(In the diagram above, the green rounded rectangle near the middle of the controller
-board is there to highlight the region of the onboard LED. 
-The [demo](demo.html) shows this LED blinking ON and OFF.)
+Be sure to connect the positive (`+`) voltage from the battery to the `VIN` pin
+on the UNO.  Unlike the `5V` pins on the UNO, voltage the comes into the UNO
+through the `VIN` pin goes throught the on-board voltage regulator; this protects
+your board from damage.
 
-## Power From a Battery Pack ##
+**Note: It is a convention to use red cables for the positive voltage, and
+black cables for 0V, or "ground".**
 
-| Battery Pack connected to a Trinket Pro     |
+| Uno Connected to a pack of 4 1.5V batteries |
 |:-------------------------------------------:|
-| ![](images/trinketpro_w_battery_bb.svg.png) |
+| ![](images/uno-with-battery_bb.svg.png)     |
 
-Connect the `+` side of the battery to the pin marked `BAT` on the Pro Trinket.
-
-Connect the `-` side of the battery to the pin marked `GND` on the Pro Trinket.
-
-The connector on the battery pack shown in the figure is called a "JST PH" connector; these
-are commonly used in hobby products such as RC cars.  It is convenient to connect
-to it using wires attached to a mating socket connector.
-
-The *color* of your connecting cables is unimportant.  However, by convention, it is
-customary to choose: 
-
-* a black wire for the connection to `GND` on the controller board.  
-* a red wire for the connection to `BAT` on the controller board.
 
 
 

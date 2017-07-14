@@ -2,160 +2,205 @@
 
 Programs written in the Arduino IDE are called "sketches".
 
-A sketch contains a series of statements which tell the
-microcontroller what to do.  Each statement *must* end in a semi-colon.
+* Every sketch must contain (at least) two functions, pre-named `setup()` and `loop()`.
+* A function is a list of statements.
 
-Sometimes, it is convenient to treat a group of statements as a single
-entity, or "block".  A block of statements is always enclosed in curly 
-braces (`{`..`}`).
+Your job is to write the statements that define what those functions do.
 
-A function is a block of statements which have:
+## Anatomy of a statement ##
 
-* a name (by which it can be invoked once or many times)
-* a set of input parameters
-* an output value
+There are many types of statements, but you can get started writing sketches 
+using only expression-type statements.  
 
-An Arduino sketch must contain at least two functions with specific names:
+Here are some examples:
+
+`x = 1000;`
+: Tells the microcontroller to store the value on the right hand side into a
+: memory location which will henceforth be named `x`.
+
+`x = dt * 2;`
+: Tells the microcontroller to retrieve the value in the memory location named
+:`dt`, multiply it by `2`, and then store the result in the location named `x`.
+
+Syntax note:  
+
+* every statement *must* end in a semi-colon.
+
+So how does a particular area of the microcontroller's memory get 
+assigned a "name"?  Answer:  before a variable can be used, it must be 
+"declared", i.e., you must tell `arduino` what type of variable it is, so
+that it will reserve enough memory to store that variable.
+
+For example,
+
+`int x;`
+: Reserves 4 bytes of memory, and names that memory location `x`.
+
+`char mychar;`
+: Reserves 1 byte of memory, and names that memory location `mychar`.
+ 
+Syntax note:  
+
+* Variable declarations like those above *must* occur before those variables
+are used in your program.
+
+## Anatomy of a function ##
+
+A function is a block of statements which can be executed as a single
+command.  A function may have some inputs (arguments) and may have some 
+outputs (return value).  
+
+Here are some examples of *using* a function:
+
+`x = sqrt(y);`  
+: Fetches the value stored in the location named `y`, then
+: invokes the function `sqrt()` with the value of `y` as a parameter, which returns a result, and
+: stores the result in the location named `x`.   
+
+`portlimit = 2 * myfunc(portno, times);`
+: Fetches the value stored in `portno`, and 
+: fetches the value stored in `times`, and
+: invokes the function `myfunc()` with these parameters, which returns a result, then 
+: multiplies that result by 2, and finally
+: stores the product at the location named `portlimit`.
+
+`initCounter();`
+: Execute the statements inside `initCounter()`.
+: (That's all; do not return any result.)
+
+Here is an example of *writing* a function:
+
+    int addOne(int dt) {
+       dt = dt + 1;
+       return dt;
+    } 
+
+As above, this function might be used like this: 
+
+`newCount = addOne(522);`
+: invoke the function `addOne() with the argument `522`, and return the result
+: store the result in the location `newCount`.
+
+The components of every function are:
+
+|         Name | Input Parameter(s) w/ type  | Statement(s) | Return Type |
+|:------------:|:---------------------------:|:------------:|:-----------:|
+| ![](images/afunc1.png) | ![](images/afunc2.png) | ![](images/afunc3.png) | ![](images/afunc4.png) | 
+
+
+Syntax notes:  
+
+* The statements belonging to a function *must* be enclosed in curly braces.
+* Functions with no input parameters can be written with the parameter list `()`, or `(void)`.
+>   If there are two or more input parameters, they must be separated by a comma.
+* If the function does not return a value, then its return type is `void`.
+
+## Writing your own functions ##
+
+To program an Arduino board, you must write the *statements* that define each of 
+two functions:
 
 ` setup()`
-: This function is executed just once, after the board is powered on or reset.
-: This is a good place to set whatever I/O pin you'll use into INPUT mode 
-: or OUTPUT mode.  All pins on Arduino boards are in INPUT mode by default.
+: This function is executed only once, immediately after the board is powered on or reset.
+: It is used, among other thngs, to initialize the state of the I/O pins.
+:
+: `setup()` has no input parameters.  (This is why the parentheses are empty.)
+: `setup()` returns no output value.  (So its return "type" is `void`.)
 
 `loop()`
 : This function is executed repeatedly until the board is powered off or reset.
+:
+: `loop()` has no input parameters.  (This is why the parentheses are empty.)
+: `loop()` returns no output value.  (So its return type is `void`.)
 
-Neither function takes any input parameters, and neither one produces an output
-value.  So they they both have the same "signature", either
-
-    void setup() {...}
-    void loop() {...)
-
-You could also write:
-
-    void setup (void) {...}
-    void loop (void) {...}
-
-### Bare-bones version ###
-
-A bare-bones program to turn on the on-board LED for 1 second, and 
-then turn it off for 1 second is:
+A bare-bones sketch to turn on the on-board LED for 1 second, and 
+then turn it off for 1 second is shown below.
 
     void setup() {
-        pinMode(13, OUTPUT);
-        digitalWrite(13, LOW);
+        pinMode(13, OUTPUT);    // Call the function "pinMode" with two parameters
+                                // pinMode will not return a value.
+        digitalWrite(13, LOW);  // Call the function "digitalWrite" with one parameter
+                                // digitalWrite will not return a value.
     }
 
     void loop() {
-        digitalWrite(13, HIGH);
+        digitalWrite(13, HIGH); 
         delay(1000);            
         digitalWrite(13, LOW); 
         delay(1000);            
 
     }
 
-In reality, a sketch is not, by itself, enough to program the Arduino.  
-Instead, the arduino program takes your sketch, and incorporates it into a 
-larger program.  This larger program 
+The statements in the `setup()` function tell the microcontroller to:
 
-* calls the `setup()` function **once**, and then
-* calls the `loop()` function again and again, until the microcontroller is reset.  
+* use Digital I/O pin 13 in `OUTPUT` mode, and
+* set the initial output value on that pin to a logical `LOW` level (0V).
 
-### What Happens in the `setup()` function? ###
+The statements in the `loop()` function tell the microcontroller to::
 
-The `setup()` function above tells the microcontroller that digital pin 13 will be
-operated in `OUTPUT` mode.  (This statement is essential, because without it the
-pin would be *assumed* to be operating in the default mode, which is `INPUT`.)
+* set pin 13 to a logical `HIGH` level (5V), then
+* do nothing for 1000 milliseconds (1 msec), then
+* set pin 13 to logical `LOW` level (0V), then
+* waits 1 msec.  
 
-In `OUTPUT` mode, the specified pin can produce either of two voltage levels, 
-0V when it is set `HIGH`, and 5V when it is set `LOW`.  The statement:
+Enter the above program into the big white programming window in the `arduino` GUI
+(see the figure below at left).  Check that it can be understood by the compiler by 
+clicking the check symbol in in the left of the toolbar (figure below, center).  
+Then download the (compiled) program to your Arduino by clicking the right arrow 
+next to the check symbol (figure below, right). 
 
-   digitalWrite(13, LOW);
+| Text Window             |  Compile Button         | Download Button         |
+|:-----------------------:|:-----------------------:|:-----------------------:|
+| ![](images/screen1.png) | ![](images/screen2.png) | ![](images/screen3.png) | 
 
-sets the initial value of the voltage on pin 13 to be 0V.  The LED will be off.
+Syntax note:
 
-### What Happens in the `loop()` function? ###
+* Double forward slashes (`//`) introduce a comment, which is ignored by `arduino`, but
+will probably be useful to you or someone else who uses your code.  **Comments are good practice.**
 
-The statements in `loop()` have the effect:
+## Under the hood ##
 
-1.  Set the voltage on pin 13 to 5V.
-2.  Wait 1000 msec = 1 second.
-3.  Set the voltage on pin 13 to 0V.
-4.  Wait 1000 msec = 1 second.
+In reality, the sketch above is not, by itself, enough to program the Arduino.  
 
-At this point, the `loop()` function has completed its work, but the larger
-program then just calls `loop()` again, and the 4 steps above are repeated.
-Ad infinitum.
+Instead, `arduino` takes your sketch, and wraps a larger, pre-written program 
+around it.  That larger program calls your `setup()` function once, and then 
+calls your `loop` function forever.  When you compile your sketch (by 
+clicking the check button in the toolbar, you will be actually be 
+compilng this larger program.
 
 ## An Improved Version ##
 
-A simple improvement to the above program makes it much easier to
-maintain.  Suppose you wanted to use the same code (or similar)
-on another microcontroller board where the on-board LED was controlled 
-through digital pin 8.  Then you'd have to modify the above program in 3 places.
+A simple improvement to the above program makes it much easier to maintain.  
+
+Suppose you wanted to use the same code (or similar) on another microcontroller 
+board where the on-board LED was controlled through digital pin 8.  Then you'd 
+have to modify the above program in 3 places.
 
 To avoid that, write a *single* statement at the top of the program, where
 you specify the pin number of the on-board LED, and assign that value to a
 "name"; in this case, the name "LED" is an obvious choice, but "ONBOARDLED"
 would work fine also.  (It is common practice to use names with all caps for
-variables that won't be changed during the course of the program.)  
-Whatever name you use, since the statement is outside of both functions,
-it is said to be a "global" variable, and can be accessed by both of them.
+values that won't be changed during the course of the program.)  
 
-    int LED=13;
+    int LED=13;                   // This is now the only statement that needs fixing if you
+                                  // decide to change the pin number where the led is attached.
 
     void setup() {
-        pinMode(LED, OUTPUT);
-        digitalWrite(LED, LOW);
+        pinMode(LED, OUTPUT);     
+        digitalWrite(LED, LOW);   
     }
 
     void loop() {
-        digitalWrite(LED, HIGH);
-        delay(1000);            
-        digitalWrite(LED, LOW); 
-        delay(1000);            
+        digitalWrite(LED, HIGH);  
+        delay(1000);              
+        digitalWrite(LED, LOW);   
+        delay(1000);              
 
     }
 
-### Ahh, Comments! ###
+Syntax note:
 
-Good coding practice demands that you put comments in your code, so that
-other people can understand what you did, and so that you can understand what
-you did (and why you did it) an hour or a week after you wrote it.
+* Any variable which is meant to be visible to all your functions must be declared
+before all of them, i.e., at the start of your program.  Such a variable is said
+to be "global".
 
-The compiler simply ignores comments when it compiles your code.
-
-There are two kinds of comments:
-
-Multi-line comments
-: These comments begin with the two-character sequence: `/*`, and end with
-: the two-character sequence: `*/`.
-
-Single-line comments
-: These comments begin with the two-character sequence: `//`, and end at 
-: the end of the line.
-
-It is good practice to put a multi-line comment at the beginning of your code,
-which sates the purpose of the program.  
-
-    /* Blink the onboard LED using an Arduino UNO */
-     
-    int LED=13;    // The onboard LED on the UNO is activated on pin 13
-                   // Change this to pin 1 if you are using a Trinket.
-                   // Change this to pin 7 if you are using a Flora.
-    
-    void setup (void) {
-        pinMode(LED, OUTPUT);     // Normally, all pins are in INPUT mode
-                                  // The processor can only change the state of
-    			          // a pin by putting that pin in OUTPUT mode.
-        digitalWrite(LED, LOW);   // This is just to start the program in a known state.
-                                  // Whether it should start in the ON state or the OFF
-    			          // state just depends on your application.
-    }
-    
-    void loop (void) {
-        digitalWrite(LED, HIGH);   // Turn the LED on.
-        delay(1000);               // Leave it on for 1000 ms, which is 1s.
-        digitalWrite(LED, LOW);    // Turn the LED off.
-        delay(1000);               // Leave it off for 1000 ms.
-    }

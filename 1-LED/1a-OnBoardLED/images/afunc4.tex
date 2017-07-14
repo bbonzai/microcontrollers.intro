@@ -1,0 +1,26 @@
+\documentclass[xcolor=table]{article}
+\usepackage{ragged2e}
+\usepackage{pstricks}
+\usepackage{pst-eps}
+\usepackage{pstricks-add}
+\usepackage{anyfontsize}
+\usepackage{pifont}
+\usepackage{DejaVuSansMono}
+\usepackage{libertine}
+\begin{document}
+\TeXtoEPS
+\begin{pspicture}(0,0)(9,5)
+\fontsize{20}{22}\selectfont
+%\rput[bl](0,0){\psgrid(0,0)(30,20)}
+\rput[bl](0,0){%
+\begin{minipage}[t]{2.0\linewidth}
+\fontfamily{DejaVuSansMono-TLF}\selectfont%
+\textcolor{red}{int} addone (int dt) \{ \\[10pt]
+\hspace*{1cm}dt = dt + 1;\\[10pt]
+\hspace*{1cm}return dt;\\[10pt]
+\}\\
+\end{minipage}
+}
+\end{pspicture}
+\endTeXtoEPS
+\end{document}

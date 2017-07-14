@@ -14,6 +14,8 @@ three long blinks, followed by three short blinks, followed again by a rather
 long delay.  Congratulations!  You have just made the LED blink out the 
 equivalent of "SOS"!
 
+5. Re-write the sample sketch so that it turns on the LED one time, delays
+for 1 second, and then turns it off *until the board is reset*.
 
 
 
