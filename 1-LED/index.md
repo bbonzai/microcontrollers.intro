@@ -1,45 +1,38 @@
-# First steps in using `arduino` with an Arduino controller board #
+## Simple Arduino Circuits ##
 
-If you can blink an LED, you are on your way to becoming an Arduino master!
-
-## Blinking the On-Board LED ##
-
-Every Arduino board comes equipped with an LED on it.  This LED can be 
-programmed, providing a convenient means of checking that your `arduino` 
-software and connection to your board are set up correctly.
-
-The instruction packet "[1a-OnBoardLED](1a-OnBoardLED)" shows how to 
-make your on-board LED "blink".  This packet also illustrates the general
+* Packet [1a-OnBoardLED](1a-OnBoardLED) shows how to blink the LED that comes
+on every Arduino controller board.  This packet also illustrates the general
 structure of any `arduino` program, and shows how to upload the program 
 to your board.
 
-## Blinking an External LED ##
+* Packet [1b-ExternalLED](1b-ExternalLED) shows how to use a breadboard,
+set up a simple circuit using the digital I/O pins on the Arduino, and
+control an external device.
 
-An Arduino master's ultimate objective is to control control external devices
-like lights, speakers, motors, and of course water squirters.  
-The instruction packet [1b-ExternalLED](1b-ExternalLED)" shows how to 
-take the first step:  how to build and control a circuit with a single *external* 
-LED.  In the process, this packet also shows how to use breadboards to make 
-test circuits.  
+* Packet [1c-SeveralLEDs](1c-SeveralLEDs) expands on Packet 1b-ExternalLED,
+showing you how to simulate a traffic stoplight using three different LEDs.
 
-And for a deep dive, you can use the LED to send Morse code.
+## Key Programming Skills ##
 
-## Blinking a Bunch of LEDs ##
+* Packet [1d-Functions](1d-Functions) shows how to streamline your code
+by taking blocks of repeated statements and placing them into your own
+custom-designed function.  This will make your code more readable, easier
+to test and easier to re-use.
 
-An easy and obvious extension to the above is to control many LEDs.  
+* Packet [1e-conditionals](1e-conditionals) shows how to get greater control
+over an `arduino` program by executing selected statements only if/when some
+logical test is satisfied.  This is a basic component of programming in any language.
 
-The packet "[1c-SeveralLEDs](1c-SeveralLEDs)" shows a rudimentary way 
-to simulate a traffic stoplight using one red, one green, and one yellow LED.
+* Packet [1f-loops](1f-loops) shows how to repeat a sequence of steps 
+a certain number of times, or until some condition is met.
 
-## Writing Your Own Functions ##
+## Interacting with the Arduino ##
+
+* Packet [1g-SerialConsole](1g-SerialConsole) shows how to read data from your 
+Arduino while its working, and how to control the behaviour of a program from
+your keyboard.
  
-Functions allow you to define a block of statements that can be 
-easily repeated.  Functions have two key advantages over loops:
 
-* Functions have names, which means they can be "called" at any 
-point in your program.  
-* Functions take "parameters", so that their outcome can be adjusted for
-different inputs.
+ 
 
-`functions` are covered in [packet 1d](1d-functions).
 
