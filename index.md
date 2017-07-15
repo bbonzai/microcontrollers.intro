@@ -38,22 +38,12 @@ ordinary household *electrical* switches in two ways:
 
 There are three steps to customizing a microcontroller for a particular project:
 
-1.  Write a program using a workstation (laptop or desktop).  The program:
+1.  Write a program using a workstation (laptop or desktop). 
 
-> * (initially) sets the values of counters, registers, I/O ports, etc. 
-within the microcontroller.
-
-> * (thereafter) commands the microcontroller to get input from various registers or 
-ports, and (depending on their value), send output to various registers or ports.
-
-2.  "Compile" the program.
-
-> * Convert the program into the 1's and 0's that the microcontroller can understand.
+2.  "Compile" the program, turning it into the 1's and 0's that can be understood by the microcontroller.
    
-3.  Download the program to the microcontroller.
-
-> * This is called "flashing" the microcontroller, because its "flash" memory 
-is being written.  
+3.  Download the program to the microcontroller, aka "flash" it, because your are
+writing your compiled program to its flash memory.
 
 **➡ Once programmed, a microcontroller will repeat the same set of commands forever.  If it
 is reset or temporarily loses power, it will start again and continue running the same 
