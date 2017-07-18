@@ -4,13 +4,13 @@ The following code is a bare-bones demonstration of the use
 of the HC-SR04 ultrasonic sensor.  The sensor begins "ranging"
 when a voltage pulse (`LOW`->`HIGH->`LOW) is sent to its
 "trigger" pin.  The pulse should be short, e.g., 10 μsec.
-After this pulse, then the module will send out a train of 
+After this pulse, then the sensor will send out a train of 
 exactly 8 pulses of 40 kHz ultrasound.  If some object is 
 within range of the sensor, then these pulses will bounce off 
 the object and return to the sensor.  
 
 The received sound can be detected using the Arduino `pulseIn()` 
-function on the module's input, pin, aka `echoPin`.  Since the 
+function on the sensor's input, pin, aka `echoPin`.  Since the 
 speed of sound is a constant,
 that time duration can be converted directly into a distance.
 
