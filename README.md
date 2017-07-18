@@ -7,7 +7,7 @@ for a course called "Introduction to Microcontrollers" offered by
 
 All of the web pages are originally written in (Pandoc) Markdown.  They are 
 then converted into web pages using a variant of the static web site generator,
-[Hakyll](http://://jaspervdj.be/hakyll/).  That variant,
+[Hakyll](http://jaspervdj.be/hakyll/).  That variant,
 [Sigkill.dk](http://sigkill.dk/programs/sigkill.html), was used because
 it added the capability to generate a menu tree.  
 
