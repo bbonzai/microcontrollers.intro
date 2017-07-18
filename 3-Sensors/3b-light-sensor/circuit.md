@@ -11,7 +11,7 @@ The circuit is shown below.
 
 | Combining a TrimPot with an LED            |
 |:------------------------------------------:|
-| ![](images/cds_w_led.png) |
+| ![](images/cds_w_led_bb.png) |
 
 Since the CdS sensor is just a resistor, it doesn't matter which
 orientation you use; either pin can be attached to `5V`, and the
