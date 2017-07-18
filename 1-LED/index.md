@@ -14,7 +14,7 @@ showing you how to simulate a traffic stoplight using three different LEDs.
 
 ## Key Programming Skills ##
 
-* Packet [1d-Functions](1d-Functions) shows how to streamline your code
+* Packet [1d-functions](1d-functions) shows how to streamline your code
 by taking blocks of repeated statements and placing them into your own
 custom-designed function.  This will make your code more readable, easier
 to test and easier to re-use.
