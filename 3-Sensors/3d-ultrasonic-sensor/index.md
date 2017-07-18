@@ -13,11 +13,11 @@ However, ultrasonic sensors are a poor choice when the target being tracked
 is made of some soft material; such objects will not reflect the sound
 wave very efficiently.
 
-This packet shows how to use the HC-SR04 ultrasonic module, which can
+This packet shows how to use the HC-SR04 ultrasonic sensor, which can
 be used to detect obstacles that are as near as 2cm and as distant as 400cm,
 and can measure their distance with a precision of 0.3cm.  
 
-The two components of the HC-SR04 ultrasonic module are:
+The two components of the HC-SR04 ultrasonic sensor are:
 
 * the trigger, which should be activated by setting it at a `HIGH` 
 state for 10 µs.  This has the effect of making the trigger unit
