@@ -33,7 +33,7 @@ than that.
 
 ### Other Sensors ###
  
-Packet [3d](3d-ultrasonic-sensor) shows how to use an ultrasonic sensor
+Packet [3d-ultrasonic-module](3d-ultrasonic-module) shows how to use an ultrasonic sensor
 to detection the distance to the object in front of it.  This sensor
 not an analog sensor, nor is it a digital sensor like the PIR.  Instead,
 this sensor produces a pulse (a transition from `LOW` to `HIGH`, followed 
