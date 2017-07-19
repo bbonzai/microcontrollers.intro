@@ -55,9 +55,9 @@ from its "high" side (the "collector") to its ground side (the "emitter").
 Wiring:  First, insert the transistor into the breadboard, with the flat side 
 facing the Arduino.
 
-Connect the loose end of the resistor to the center pin of the transistor.
-
 Connect the low (black) wire of the speaker to the upper end of the transistor.
+
+Connect the loose end of the resistor to the center pin of the transistor.
 
 Connect the lowest pin on the transistor to the `GND` bus on the breadboard.
 
@@ -68,7 +68,14 @@ The circuit with the speaker connected to the transistor is shown below:
 | ![](images/speaker_w_resistor_battery_npn_bb.svg.png)  |
 
 For reference, the specific transistor used in this circuit is a PN2222.  
-The labels for its Emitter, Base, and Collector are shown below:
+Viewed from the "front", or flat side, the pins are labelled:
+
+* **E** (green) will generally be connected to a controlling pin on the Arduino
+
+* **B** (red) will generally be connected to the device whose power the
+transistor is controlling.
+
+* **C** (black) goes to `GND`
 
 | Pinouts for the PN2222           |
 |:--------------------------------:|
