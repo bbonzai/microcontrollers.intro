@@ -9,7 +9,7 @@ cutouts_x = 3.5*unit*2;
 cutouts_y = diode_diameter;
 cutouts_ys = diode_diameter - cutouts_x;
 pindiameter=2.5*unit;
-pinheight=3.0*diode_diameter;
+pinheight=2.5*diode_diameter;
 pinoffsetx = diode_diameter/2.85;
 ff=0.1;    // fudge factor
 
@@ -34,15 +34,15 @@ difference() {
 }
 }
 
-// Make the Emitter green, since it carries the signal
-color([0,1,0])
-translate([-2.6*pinoffsetx,-75]){text("E", size=12,font="Liberation Sans:style=Bold");}
-
-// Make the Base red, since it goes to the thing being driven
-color([1,0,0])
-translate([-0.70*pinoffsetx,-78]){text("B", size=12,font="Liberation Sans:style=Bold");}
-
-// Make the collector black since it goes to ground
+// Make the Emitter black, since it goes to GND
 color([0,0,0])
-translate([1.40*pinoffsetx,-75]){text("C", size=12,font="Liberation Sans:style=Bold");}
+translate([-2.6*pinoffsetx,-(1.25*pinheight)]){text("E", size=12,font="Liberation Sans:style=Bold");}
+
+// Make the Base green, since it carries the signal from the Arduino
+color([0,1,0])
+translate([-0.70*pinoffsetx,-(1.30*pinheight)]){text("B", size=12,font="Liberation Sans:style=Bold");}
+
+// Make the collector red, since it controls power
+color([1,0,0])
+translate([1.25*pinoffsetx,-(1.25*pinheight)]){text("C", size=12,font="Liberation Sans:style=Bold");}
 

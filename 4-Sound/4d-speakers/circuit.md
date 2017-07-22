@@ -70,12 +70,12 @@ The circuit with the speaker connected to the transistor is shown below:
 For reference, the specific transistor used in this circuit is a PN2222.  
 Viewed from the "front", or flat side, the pins are labelled:
 
-* **E** (green) will generally be connected to a controlling pin on the Arduino
+* **E** (black) goes to `GND`
 
-* **B** (red) will generally be connected to the device whose power the
+* **B** (green) will generally be connected to a controlling pin on the Arduino
+
+* **C** (red) will generally be connected to the device whose power the
 transistor is controlling.
-
-* **C** (black) goes to `GND`
 
 | Pinouts for the PN2222           |
 |:--------------------------------:|
